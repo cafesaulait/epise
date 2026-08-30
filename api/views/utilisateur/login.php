@@ -1,1 +1,0 @@
-<h1>Connexion</h1><?php if (!empty($msg)): ?><p><?= htmlspecialchars($msg) ?></p><?php endif; ?><form method="post"><input type="email" name="email" required><input type="password" name="pass" required><button name="valide">Connexion</button></form>
