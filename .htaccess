@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^$ frontend/ [L]
+RewriteRule ^api/?$ api/ [L]

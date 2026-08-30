@@ -1,0 +1,4 @@
+<h1>Créer un compte</h1><?php if (!empty($msg)): ?><p><?= htmlspecialchars($msg) ?></p><?php endif; ?><form method="post"><input name="nom" placeholder="Nom" required><input name="prenom" placeholder="Prénom" required><input type="email" name="email" placeholder="Email" required><input type="password" name="pass" placeholder="Mot de passe" required><input type="password" name="pass_confirm" placeholder="Confirmation" required><select name="role">
+        <option value="beneficiaire">Étudiant</option>
+        <option value="donateur">Donateur</option>
+    </select><label><input type="checkbox" name="email_verifie" value="1"> Vérifier l'email ?</label><button name="valide">Créer mon compte</button></form>
