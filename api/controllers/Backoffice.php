@@ -72,10 +72,7 @@ class Backoffice extends \app\Controller
     {
         $this->guard();
         $this->loadModel('Don');
-        $this->loadModel('DonProduit');
         $dons = $this->Don->pending();
-        foreach ($dons as &$don) $don['produits'] = $this->DonProduit->byDon((int)$don['id_don']);
         $this->render('dons', compact('dons'), 'dashboard');
     }
 }
-?>

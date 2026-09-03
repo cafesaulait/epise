@@ -1,4 +1,5 @@
 <?php
+
 namespace app;
 
 #[\AllowDynamicProperties]
@@ -31,5 +32,14 @@ abstract class Controller
         header('Content-Type: application/json; charset=utf-8');
         echo json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
     }
+
+    protected function jsonInput(): array
+    {
+        return json_decode(file_get_contents('php://input'), true) ?: [];
+    }
+
+    protected function isAdmin(): bool
+    {
+        return !empty($_SESSION['admin_id']);
+    }
 }
-?>

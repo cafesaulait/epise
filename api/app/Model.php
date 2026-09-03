@@ -1,4 +1,5 @@
 <?php
+
 namespace app;
 
 abstract class Model
@@ -27,7 +28,7 @@ abstract class Model
         return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
     }
 
-    public function getOne(int $id): array|false
+    public function findById(int $id): array|false
     {
         $sql = "SELECT * FROM `{$this->table}` WHERE `{$this->primaryKey}` = ? LIMIT 1";
         $stmt = $this->_connexion->prepare($sql);
@@ -45,4 +46,3 @@ abstract class Model
         return is_array($data) ? $data : [];
     }
 }
-?>
