@@ -12,7 +12,6 @@ class Utilisateur extends \app\Model
         $this->getConnection();
     }
 
-    //créer un utilisateur et renvoyer la ligne créée (sans mdp), pour connexion directe
     public function create(string $nom, string $prenom, string $email, string $mdp, string $role): array
     {
         $hash = password_hash($mdp, PASSWORD_DEFAULT);
@@ -32,7 +31,6 @@ class Utilisateur extends \app\Model
         return $utilisateur;
     }
 
-    //verifier email et mot de passe pour l'authentification
     public function authenticate(string $email, string $mdp): array|false
     {
         $sql = "SELECT * FROM `{$this->table}` WHERE `email` = ?";
@@ -58,7 +56,6 @@ class Utilisateur extends \app\Model
         return (bool) $stmt->get_result()->fetch_assoc();
     }
 
-    //modifier nom/prenom/email, renvoie la ligne à jour (sans mdp)
     public function update(int $id, string $nom, string $prenom, string $email): array
     {
         $sql = "UPDATE `{$this->table}` SET `nom` = ?, `prenom` = ?, `email` = ? WHERE `{$this->primaryKey}` = ?";
@@ -76,7 +73,6 @@ class Utilisateur extends \app\Model
         return $utilisateur;
     }
 
-    //compte les utilisateurs par rôle, pour le dashboard admin
     public function countByRole(string $role): int
     {
         $sql = "SELECT COUNT(*) AS total FROM `{$this->table}` WHERE `role` = ?";
@@ -84,5 +80,26 @@ class Utilisateur extends \app\Model
         $stmt->bind_param('s', $role);
         $stmt->execute();
         return (int) $stmt->get_result()->fetch_assoc()['total'];
+    }
+
+    public function verifierMotDePasse(int $id, string $mdp): bool
+    {
+        $sql = "SELECT mdp FROM `{$this->table}` WHERE `{$this->primaryKey}` = ?";
+        $stmt = $this->_connexion->prepare($sql);
+        $stmt->bind_param('i', $id);
+        $stmt->execute();
+        $ligne = $stmt->get_result()->fetch_assoc();
+        return $ligne && password_verify($mdp, $ligne['mdp']);
+    }
+
+    public function changerMotDePasse(int $id, string $nouveauMdp): void
+    {
+        $hash = password_hash($nouveauMdp, PASSWORD_DEFAULT);
+        $sql = "UPDATE `{$this->table}` SET `mdp` = ? WHERE `{$this->primaryKey}` = ?";
+        $stmt = $this->_connexion->prepare($sql);
+        $stmt->bind_param('si', $hash, $id);
+        if (!$stmt->execute()) {
+            throw new \RuntimeException($stmt->error);
+        }
     }
 }

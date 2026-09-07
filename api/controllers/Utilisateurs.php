@@ -56,7 +56,6 @@ class Utilisateurs extends \app\Controller
                         $d['role'],
                     );
 
-                    // Connecte directement l'utilisateur après inscription
                     session_regenerate_id(true);
                     $_SESSION['utilisateur_id'] = $utilisateur['id_utilisateur'];
                     $_SESSION['utilisateur'] = $utilisateur;
@@ -87,6 +86,43 @@ class Utilisateurs extends \app\Controller
                     $this->json(['error' => 'Méthode non autorisée'], 405);
                     return;
             }
+        } catch (\InvalidArgumentException $e) {
+            $this->json(['error' => $e->getMessage()], 400);
+        } catch (\Throwable $e) {
+            $this->json(['error' => $e->getMessage()], 500);
+        }
+    }
+
+    //changer le mot de passe
+    public function motDePasse(): void
+    {
+        if (empty($_SESSION['utilisateur_id'])) {
+            $this->json(['error' => 'Connexion requise'], 401);
+            return;
+        }
+
+        if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+            $this->json(['error' => 'Méthode non autorisée'], 405);
+            return;
+        }
+
+        $this->loadModel('Utilisateur');
+        $id = (int) $_SESSION['utilisateur_id'];
+
+        try {
+            $d = $this->jsonInput();
+            if (empty($d['mdp_actuel']) || empty($d['nouveau_mdp'])) {
+                throw new \InvalidArgumentException('Champs manquants');
+            }
+            if (strlen($d['nouveau_mdp']) < 8) {
+                throw new \InvalidArgumentException('Le nouveau mot de passe doit contenir au moins 8 caractères');
+            }
+            if (!$this->Utilisateur->verifierMotDePasse($id, $d['mdp_actuel'])) {
+                throw new \InvalidArgumentException('Mot de passe actuel incorrect');
+            }
+
+            $this->Utilisateur->changerMotDePasse($id, $d['nouveau_mdp']);
+            $this->json(['message' => 'Mot de passe modifié']);
         } catch (\InvalidArgumentException $e) {
             $this->json(['error' => $e->getMessage()], 400);
         } catch (\Throwable $e) {
