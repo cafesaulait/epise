@@ -41,6 +41,11 @@ class Panier extends \app\Controller
                     if ($quantiteDemandee > (int) $produit['stock']) {
                         throw new \InvalidArgumentException("Stock insuffisant : il ne reste que {$produit['stock']} en stock");
                     }
+                    if (!$this->Panier->peutAjouter($id_panier, (int) $d['quantite'])) {
+                        throw new \InvalidArgumentException(
+                            'Vous ne pouvez pas avoir plus de 5 produits dans votre panier.'
+                        );
+                    }
                     $this->Panier->addItem($id_panier, $id_produit, (int) $d['quantite']);
                     $this->json(['message' => 'Produit ajouté au panier'], 201);
                     return;
@@ -57,6 +62,22 @@ class Panier extends \app\Controller
                     }
                     if ((int) $d['quantite'] > (int) $produit['stock']) {
                         throw new \InvalidArgumentException("Stock insuffisant : il ne reste que {$produit['stock']} en stock");
+                    }
+                    $quantiteActuelle = $this->Panier->quantiteActuelle(
+                        $id_panier,
+                        $id_produit
+                    );
+
+                    $totalActuel = $this->Panier->totalUnits($id_panier);
+
+                    $nouveauTotal = $totalActuel
+                        - $quantiteActuelle
+                        + (int) $d['quantite'];
+
+                    if ($nouveauTotal > 5) {
+                        throw new \InvalidArgumentException(
+                            'Vous ne pouvez pas avoir plus de 5 produits dans votre panier.'
+                        );
                     }
                     $this->Panier->updateItem($id_panier, $id_produit, (int) $d['quantite']);
                     $this->json(['message' => 'Quantité mise à jour']);

@@ -102,4 +102,129 @@ class Utilisateur extends \app\Model
             throw new \RuntimeException($stmt->error);
         }
     }
+
+    public function deleteAccount(int $id_utilisateur): void
+    {
+        $this->_connexion->begin_transaction();
+
+        try {
+
+            //supprimer les produits présents dans le panier
+            $stmt = $this->_connexion->prepare(
+                "DELETE FROM panier_produit
+             WHERE id_panier IN (
+                 SELECT id_panier
+                 FROM panier
+                 WHERE id_utilisateur = ?
+             )"
+            );
+
+            $stmt->bind_param(
+                'i',
+                $id_utilisateur
+            );
+
+            $stmt->execute();
+
+
+            //supprimer le panier
+            $stmt = $this->_connexion->prepare(
+                "DELETE FROM panier
+             WHERE id_utilisateur = ?"
+            );
+
+            $stmt->bind_param(
+                'i',
+                $id_utilisateur
+            );
+
+            $stmt->execute();
+
+
+            //supprimer les lignes de commande
+            $stmt = $this->_connexion->prepare(
+                "DELETE FROM ligne_commande
+             WHERE id_commande IN (
+                 SELECT id_commande
+                 FROM commande
+                 WHERE id_utilisateur = ?
+             )"
+            );
+
+            $stmt->bind_param(
+                'i',
+                $id_utilisateur
+            );
+
+            $stmt->execute();
+
+
+            //supprimer les commandes
+            $stmt = $this->_connexion->prepare(
+                "DELETE FROM commande
+             WHERE id_utilisateur = ?"
+            );
+
+            $stmt->bind_param(
+                'i',
+                $id_utilisateur
+            );
+
+            $stmt->execute();
+
+
+            //supprimer les produits des dons
+            $stmt = $this->_connexion->prepare(
+                "DELETE FROM don_produit
+             WHERE id_don IN (
+                 SELECT id_don
+                 FROM don
+                 WHERE id_utilisateur = ?
+             )"
+            );
+
+            $stmt->bind_param(
+                'i',
+                $id_utilisateur
+            );
+
+            $stmt->execute();
+
+
+            //supprimer les dons
+            $stmt = $this->_connexion->prepare(
+                "DELETE FROM don
+             WHERE id_utilisateur = ?"
+            );
+
+            $stmt->bind_param(
+                'i',
+                $id_utilisateur
+            );
+
+            $stmt->execute();
+
+
+            //supprimer le compte
+            $stmt = $this->_connexion->prepare(
+                "DELETE FROM utilisateur
+             WHERE id_utilisateur = ?"
+            );
+
+            $stmt->bind_param(
+                'i',
+                $id_utilisateur
+            );
+
+            $stmt->execute();
+
+
+            $this->_connexion->commit();
+        } catch (\Throwable $e) {
+
+            $this->_connexion->rollback();
+
+            throw $e;
+        }
+    }
 }

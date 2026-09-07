@@ -92,4 +92,9 @@ class Panier extends \app\Model
         $stmt->bind_param('ii', $id_panier, $id_produit);
         $stmt->execute();
     }
+
+    public function peutAjouter(int $id_panier, int $quantite): bool
+    {
+        return $this->totalUnits($id_panier) + $quantite <= 5;
+    }
 }
