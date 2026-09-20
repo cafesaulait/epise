@@ -1,0 +1,471 @@
+DOCUMENTATION DU PROJET EPISE
+API PHP/MySQL, backoffice et frontend Angular
+
+Version de remise : 2026
+
+======================================================================
+1. PRESENTATION GENERALE
+======================================================================
+
+Le projet EPISE est compose de deux parties deployees separement :
+
+- un frontend Angular deploye sur Netlify ;
+- une API PHP avec un backoffice et une base MySQL deployes sur
+  Alwaysdata.
+
+Le frontend ne se connecte jamais directement a MySQL. Il envoie des
+requêtes HTTP a l'API PHP. L'API interroge la base de donnees, applique
+les regles metier, puis renvoie une reponse JSON au frontend.
+
+Architecture :
+
+  Navigateur
+      |
+      | HTTPS / JSON / CORS
+      v
+  Angular sur Netlify
+      |
+      | appels HTTP
+      v
+  API PHP sur Alwaysdata
+      |
+      v
+  MySQL sur Alwaysdata
+
+======================================================================
+2. URLS DE DEPLOIEMENT
+======================================================================
+
+Frontend francais :
+https://epise-unc.netlify.app/
+
+Frontend anglais :
+https://epise-unc.netlify.app/en/
+
+API et backoffice :
+https://backoffice-epise.alwaysdata.net
+
+Exemples d'URLs publiques de l'API :
+
+GET https://backoffice-epise.alwaysdata.net/produits
+GET https://backoffice-epise.alwaysdata.net/categories
+GET https://backoffice-epise.alwaysdata.net/horaires
+GET https://backoffice-epise.alwaysdata.net/mentionslegales
+GET https://backoffice-epise.alwaysdata.net/confidentialite
+
+Backoffice :
+https://backoffice-epise.alwaysdata.net/backoffice
+
+Connexion au backoffice :
+https://backoffice-epise.alwaysdata.net/backoffice/login
+
+Les identifiants de demonstration doivent etre fournis separement par
+l'auteur du projet. Ils ne doivent pas etre commites dans Git ni inscrits
+dans une documentation publique.
+
+======================================================================
+3. INSTALLATION ET DEPLOIEMENT
+======================================================================
+
+3.1 API et backoffice
+
+Le contenu du dossier api est place dans le repertoire web Alwaysdata :
+
+home/backoffice-epise/www/api/
+
+Le fichier index.php est le point d'entree de l'API. Le fichier .htaccess
+redirige les URLs propres vers index.php avec le parametre p.
+
+Exemple :
+
+/produits
+
+est traite par :
+
+index.php?p=produits
+
+La connexion MySQL est configuree dans :
+
+api/app/ConnexionBDD.php
+
+Les valeurs de production doivent rester propres a l'environnement de
+production et ne doivent pas etre publiees dans un depot public.
+
+3.2 Frontend Angular
+
+Le frontend se trouve dans frontendepise/.
+
+Installation des dependances :
+
+npm install
+
+Lancement francais en local :
+
+npm run start:fr
+
+URL locale : http://localhost:4200/
+
+Lancement anglais en local :
+
+npm run start:en
+
+URL locale : http://localhost:4201/
+
+Build de production pour Netlify :
+
+npm run build:netlify
+
+Le script genere :
+
+- dist/index.html pour le francais ;
+- dist/en/index.html pour l'anglais.
+
+Netlify publie le dossier dist. La configuration est dans netlify.toml.
+
+======================================================================
+4. ROUTES ET UTILISATION DE L'API
+======================================================================
+
+Les routes publiques en lecture renvoient des donnees JSON.
+
+4.1 Produits
+
+GET /produits
+Retourne la liste des produits.
+
+GET /produits/{id}
+Retourne un produit identifie par son identifiant.
+
+POST /produits
+Cree un produit. Cette action est reservee a l'administrateur.
+Corps JSON attendu : nom, stock, id_categorie, description et image
+facultatifs.
+
+PUT /produits/{id}
+Modifie un produit. Action admin.
+
+DELETE /produits/{id}
+Supprime un produit. Action admin.
+
+4.2 Categories
+
+GET /categories
+Retourne toutes les categories.
+
+GET /categories/{id}
+Retourne une categorie.
+
+4.3 Authentification utilisateur
+
+GET /connexion
+Retourne l'utilisateur actuellement connecte, ou null.
+
+POST /connexion
+Corps JSON :
+{
+  "email": "adresse@example.com",
+  "mdp": "mot_de_passe"
+}
+
+POST /connexion/deconnexion
+Ferme la session utilisateur.
+
+4.4 Utilisateurs
+
+POST /utilisateurs
+Cree un compte utilisateur.
+Champs : nom, prenom, email, mdp et role.
+Les roles possibles sont donateur et beneficiaire.
+
+GET /utilisateurs/{id}
+Retourne les informations autorisees d'un utilisateur connecte ou admin.
+
+PUT /utilisateurs/{id}
+Modifie les informations d'un utilisateur autorise.
+
+DELETE /utilisateurs/{id}
+Supprime un compte selon les droits de l'utilisateur.
+
+4.5 Panier
+
+Toutes les routes panier necessitent une session utilisateur.
+
+GET /panier
+Retourne le contenu du panier.
+
+POST /panier
+Ajoute un produit.
+Corps JSON : id_produit et quantite.
+
+PUT /panier
+Modifie la quantite d'un produit.
+Corps JSON : id_produit et quantite.
+
+DELETE /panier
+Supprime un produit du panier.
+Corps JSON : id_produit.
+
+Une limite de cinq produits est appliquee au panier. Seuls les
+beneficiaires peuvent modifier leur panier.
+
+4.6 Dons
+
+GET /dons
+Retourne les dons de l'utilisateur connecte ou tous les dons pour
+l'administrateur.
+
+POST /dons
+Cree un don. L'utilisateur doit etre connecte et avoir le role donateur.
+La date et l'heure doivent etre futures et correspondre aux horaires
+ouverts de l'EPISE.
+
+4.7 Autres ressources
+
+GET /commandes
+GET /horaires
+GET /mentionslegales
+GET /confidentialite
+
+Les commandes necessitent une authentification. Les horaires, mentions
+legales et informations de confidentialite sont accessibles en lecture.
+
+======================================================================
+5. CORS ET SESSION
+======================================================================
+
+L'API autorise notamment l'origine suivante :
+
+https://epise-unc.netlify.app
+
+Les reponses CORS contiennent l'origine exacte du frontend et non une
+origine avec un slash final. Exemple :
+
+Access-Control-Allow-Origin: https://epise-unc.netlify.app
+Access-Control-Allow-Credentials: true
+
+Le frontend utilise withCredentials pour conserver la session PHP. Le
+cookie de session est configure avec Secure, HttpOnly et SameSite=None
+afin de permettre les appels HTTPS entre Netlify et Alwaysdata.
+
+======================================================================
+6. PREUVE QUE L'API EST REST / RESTFUL
+======================================================================
+
+6.1 Ressources identifiees par des URLs
+
+L'API manipule des ressources metier identifiables :
+
+- /produits ;
+- /categories ;
+- /utilisateurs ;
+- /commandes ;
+- /dons ;
+- /panier ;
+- /horaires.
+
+Une ressource particuliere est identifiee par un identifiant :
+
+GET /produits/5
+
+L'URL represente la ressource et non une action comme
+/getProduit.php ou /supprimerProduit.php.
+
+6.2 Utilisation des verbes HTTP
+
+Les actions sont exprimees par les verbes standards :
+
+- GET pour lire une ressource ;
+- POST pour creer une ressource ;
+- PUT pour modifier une ressource existante ;
+- DELETE pour supprimer une ressource.
+
+Exemple sur les produits :
+
+GET    /produits       lire la collection
+GET    /produits/5     lire un element
+POST   /produits       creer un element
+PUT    /produits/5     modifier un element
+DELETE /produits/5     supprimer un element
+
+6.3 Codes HTTP
+
+L'API utilise des codes HTTP significatifs :
+
+- 200 : requete reussie ;
+- 201 : ressource creee ;
+- 204 : operation reussie sans contenu ;
+- 400 : donnees invalides ou champ manquant ;
+- 401 : authentification necessaire ou identifiants invalides ;
+- 403 : utilisateur authentifie mais non autorise ;
+- 404 : ressource inexistante ;
+- 405 : methode HTTP non autorisee ;
+- 409 : conflit, par exemple email deja utilise ;
+- 500 : erreur interne.
+
+6.4 Format d'echange
+
+Les endpoints de l'API utilisent JSON pour les requetes et les reponses.
+Le frontend Angular consomme directement ces reponses avec HttpClient.
+
+6.5 Interface uniforme et separation client/serveur
+
+Le frontend et le serveur sont deux applications separees. Le frontend
+connait seulement les URLs et le format JSON de l'API. La base MySQL et
+les regles d'acces restent du cote serveur.
+
+6.6 Limite : RESTful, mais pas REST pur a 100 pour cent
+
+L'API respecte les principales contraintes REST pour ses endpoints JSON.
+On peut donc la qualifier d'API RESTful ou REST-like.
+
+Cependant, elle n'est pas totalement stateless au sens strict, car
+l'authentification utilise une session PHP et un cookie. La session est
+necessaire pour le panier, les commandes, les dons et les droits admin.
+Le backoffice HTML constitue aussi une partie serveur classique qui ne
+suit pas exactement le meme modele que les endpoints JSON.
+
+Cette nuance est importante : les ressources JSON sont concues de maniere
+RESTful, mais le projet complet melange API RESTful, session utilisateur
+et interface backoffice rendue en PHP.
+
+======================================================================
+7. DESIGN PATTERNS UTILISES
+======================================================================
+
+7.1 Singleton : connexion unique a la base de donnees
+
+Fichier :
+api/app/ConnexionBDD.php
+
+La classe ConnexionBDD possede :
+
+- une propriete statique $instance ;
+- un constructeur prive ;
+- une methode statique getInstance().
+
+Le modele recupere la connexion avec :
+
+ConnexionBDD::getInstance()->getConnexion()
+
+Pourquoi ce pattern est pertinent :
+
+- une seule connexion MySQL est partagee par les modeles ;
+- on evite de recreer une connexion pour chaque requete SQL ;
+- l'acces a la connexion est centralise ;
+- les identifiants et la configuration de la base sont regroupes dans
+  une seule classe.
+
+Pourquoi ne pas creer une connexion dans chaque modele :
+
+Cela dupliquerait la configuration et augmenterait le nombre de
+connexions ouvertes. Le Singleton est adapte ici car l'application doit
+utiliser une ressource partagee et unique : la connexion a la base.
+
+Limite :
+
+Un Singleton cree un etat global et peut rendre les tests unitaires plus
+difficiles. Dans un projet plus grand, une injection de dependances ou un
+conteneur de services pourrait etre prefere. Pour ce projet PHP simple,
+le Singleton reste proportionne au besoin.
+
+7.2 Fabrique : creation d'un produit a partir d'un don
+
+Fichier :
+api/factories/ProduitFactory.php
+
+Utilisation :
+api/models/Don.php
+
+La methode principale est :
+
+ProduitFactory::creerDepuisDon($connexion, $produitDon, $idCategorie)
+
+Cette methode :
+
+- lit les informations provenant du don ;
+- valide le nom, la quantite et la categorie ;
+- prepare la requete SQL ;
+- cree le produit en base ;
+- retourne l'identifiant du produit cree.
+
+Pourquoi ce pattern est pertinent :
+
+La creation d'un produit issu d'un don demande plusieurs etapes et des
+regles metier. La Fabrique rassemble ces etapes dans un point d'entree
+unique. Le modele Don n'a pas besoin de connaitre les details SQL de la
+creation d'un produit.
+
+Pourquoi ne pas placer ce code directement dans Don.php :
+
+Cela melangerait la gestion d'un don et la construction d'un produit.
+La Fabrique separe les responsabilites et permet de reutiliser la
+creation d'un produit depuis d'autres endroits si necessaire.
+
+Pourquoi ne pas utiliser un Builder :
+
+Le Builder est utile pour construire progressivement un objet complexe
+avec beaucoup d'options. Ici, la creation est une operation unique avec
+quelques valeurs obligatoires. Une Fabrique est donc plus simple et plus
+adaptee.
+
+======================================================================
+8. OU DOIVENT SE TROUVER LES IMAGES DES PRODUITS ?
+======================================================================
+
+Les noms d'images sont stockes dans la colonne image de la table produit
+ou categorie. La base ne doit pas contenir les fichiers binaires eux-
+memes dans ce projet.
+
+Deux solutions sont possibles :
+
+Solution 1 : stocker les images sur le frontend Netlify.
+
+Cette solution convient aux images fixes du site, comme le logo ou les
+illustrations editorales. En revanche, elle ne convient pas aux images
+ajoutees depuis le backoffice : le serveur Alwaysdata ne peut pas ecrire
+dans le deploiement Netlify. De plus, un redeploiement peut remplacer les
+fichiers du frontend.
+
+Solution 2 : stocker les images sur le serveur API Alwaysdata.
+
+C'est la solution retenue pour les images de produits et de categories.
+Les fichiers se trouvent dans :
+
+api/assets/img/produits/
+api/assets/img/categories/
+
+Le backoffice Alwaysdata peut y enregistrer, modifier et supprimer les
+images. Le frontend les affiche avec des URLs publiques :
+
+https://backoffice-epise.alwaysdata.net/assets/img/produits/nom-image.png
+https://backoffice-epise.alwaysdata.net/assets/img/categories/nom-image.png
+
+Cette solution est la plus coherente car :
+
+- le serveur qui gere la base gere aussi les fichiers lies aux donnees ;
+- les nouveaux uploads sont disponibles immediatement pour le frontend ;
+- les noms de fichiers en base correspondent au stockage de l'API ;
+- Netlify reste utilise pour le code Angular et les assets statiques.
+
+Les images doivent etre controlees cote serveur : type MIME, taille,
+nom de fichier genere aleatoirement et nom nettoye lors d'une suppression.
+Le code genere un nom aleatoire et limite les formats a JPG, PNG, WEBP et
+GIF.
+
+======================================================================
+9. RESUME POUR LA PRESENTATION ORALE
+======================================================================
+
+Le frontend Angular est decouple de l'API PHP. Il communique avec des
+ressources JSON via des URLs et les verbes HTTP GET, POST, PUT et DELETE.
+Les codes HTTP et les formats JSON rendent l'API RESTful dans sa partie
+API, avec une nuance liee aux sessions PHP.
+
+Le pattern Singleton est utilise pour partager une connexion MySQL
+unique. Le pattern Fabrique est utilise pour centraliser la creation d'un
+produit issu d'un don. Ces choix reduisent la duplication, separent les
+responsabilites et restent proportionnes a la taille du projet.
+
+Les images dynamiques sont stockees sur Alwaysdata, car le backoffice est
+le serveur qui les cree et les supprime. Netlify conserve les assets
+statiques du frontend, mais ne sert pas de stockage dynamique.
