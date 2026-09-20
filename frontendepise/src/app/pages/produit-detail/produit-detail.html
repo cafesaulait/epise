@@ -1,0 +1,22 @@
+<div class="produit">
+@if (produit(); as p) {
+  <img
+    [src]="p.image
+      ? '/asset/img/produits/' + p.image
+      : '/asset/img/produits/default.png'"
+    [alt]="p.nom"
+    style="width: 30vw;"
+  />
+  <div class="detail-produit">
+    <h3>{{ p.nom }}</h3>
+    <p>{{ p.description }}</p>
+    <button class="button primary" (click)="ajouterAuPanier(p)" i18n>Ajouter</button>
+  </div>
+}
+</div>
+
+<a routerLink="/catalogue" class="button secondary" i18n>Retour à la liste des produits</a>
+
+@if (introuvable()) {
+  <p i18n>Ce produit n'existe pas ou n'est plus disponible.</p>
+}

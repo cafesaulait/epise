@@ -1,0 +1,34 @@
+.panier-page {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.panier-image {
+    width: 200px;
+}
+
+.symbol {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity {
+    border: none;
+    background: none;
+    font-size: 15px;
+    text-align: center;
+    width: 80px;
+}
+
+.panier {
+    min-width: 40%;
+}
+
+.receipt {
+    flex: 1;
+}

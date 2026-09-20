@@ -1,0 +1,345 @@
+<div class="don-page">
+
+  <h1 i18n>Faire un don</h1>
+
+  @if (messageErreur) {
+    <p class="message erreur">
+      {{ messageErreur }}
+    </p>
+  }
+
+  @if (messageSucces) {
+    <p class="message succes">
+      {{ messageSucces }}
+    </p>
+  }
+
+
+
+  <form (ngSubmit)="envoyerDon()" novalidate>
+
+    <fieldset>
+
+      <legend i18n>Produits donnés</legend>
+
+      <div id="liste-produits">
+
+        @for (ligne of lignes; track ligne.id) {
+
+          <div class="ligne-produit">
+
+            <div class="champ-produit">
+
+              <label i18n>Catégorie*</label>
+
+              <select
+                class="don-select"
+                [(ngModel)]="ligne.id_categorie"
+                [name]="'categorie-' + ligne.id"
+              >
+
+                <option value="" i18n>
+                  Sélectionner
+                </option>
+
+                @for (categorie of categories; track categorie.id_categorie) {
+
+                  <option [value]="categorie.id_categorie">
+                    {{ categorie.nom }}
+                  </option>
+
+                }
+
+                <option value="autre" i18n>
+                  Autre
+                </option>
+
+              </select>
+
+            </div>
+
+
+            @if (estAutre(ligne)) {
+
+              <div class="champ-proposition">
+
+                <label i18n>
+                  Nouvelle catégorie proposée*
+                </label>
+
+                <input
+                  class="don-input-text"
+                  type="text"
+                  [(ngModel)]="ligne.categorie_proposee"
+                  [name]="'categorie-proposee-' + ligne.id"
+                  placeholder="Ex. : Produits pour bébé"
+                >
+
+                <small i18n>
+                  Cette catégorie sera proposée à l'équipe de l'EPISE.
+                </small>
+
+              </div>
+
+            }
+
+
+            <div class="champ-produit">
+
+              <label i18n>Produit*</label>
+
+              <input
+                class="don-input-text"
+                type="text"
+                [(ngModel)]="ligne.nom_produit"
+                [name]="'nom-produit-' + ligne.id"
+                placeholder="Nom du produit"
+              >
+
+            </div>
+
+
+            <div class="champ-produit">
+
+              <label i18n>Quantité*</label>
+
+              <input
+                class="don-input-number"
+                type="number"
+                [(ngModel)]="ligne.quantite"
+                [name]="'quantite-' + ligne.id"
+                placeholder="Ex. : 2"
+                min="1"
+              >
+
+            </div>
+
+
+            <button
+              class="button danger"
+              type="button"
+              (click)="supprimerProduit(ligne.id)"
+              [disabled]="lignes.length <= 1"
+             i18n>
+
+              <i class="fa-solid fa-trash-can"></i>
+              Supprimer
+
+            </button>
+
+          </div>
+
+        }
+
+      </div>
+
+
+      <button
+        class="button secondary"
+        type="button"
+        (click)="ajouterProduit()"
+       i18n>
+
+        <i class="fa-solid fa-plus"></i>
+        Ajouter un produit
+
+      </button>
+
+    </fieldset>
+
+
+    <fieldset>
+
+      <legend i18n>Informations du don</legend>
+
+
+      <div class="don-champ date-heure">
+
+          <div>
+            <label for="date" i18n>
+              Date de passage*
+            </label>
+
+            <input
+              class="don-input-date"
+              type="date"
+              id="date"
+              name="date"
+              [(ngModel)]="date"
+              [min]="dateMinimum"
+            >
+          </div>
+
+
+          <div>
+            <label for="heure" i18n>
+              Heure de passage*
+            </label>
+
+            <input
+              class="don-input-time"
+              type="time"
+              id="heure"
+              name="heure"
+              [(ngModel)]="heure"
+              [class.champ-erreur]="heureAErreur()"
+            >
+
+            @if (heureAErreur()) {
+              <small class="erreur-champ">
+                {{ messageHoraire() }}
+              </small>
+            } @else if (date && dateSelectionnee(); as horaire) {
+              @if (horaire.ouvert) {
+                <small>
+                  Horaires disponibles :
+                  {{ horaire.ouverture_1?.slice(0, 5) }}
+                  -
+                  {{ horaire.fermeture_1?.slice(0, 5) }}
+
+                  @if (horaire.ouverture_2) {
+                    et
+                    {{ horaire.ouverture_2?.slice(0, 5) }}
+                    -
+                    {{ horaire.fermeture_2?.slice(0, 5) }}
+                  }
+                </small>
+              } @else {
+                <small class="ferme">
+                  L’EPISE est fermée ce jour-là.
+                </small>
+              }
+            }
+          </div>
+
+        </div>
+
+        <div class="horaires-epise">
+
+          <div class="horaires-titre" i18n>
+            <i class="fa-solid fa-clock"></i>
+            <strong>Horaires de l'EPISE</strong>
+          </div>
+
+          <div class="horaires-liste">
+
+            @for (horaire of horaires; track horaire.jour) {
+
+              <div class="horaire-ligne">
+
+                <strong>
+                  {{ horaire.nom_jour }}
+                </strong>
+
+                @if (horaire.ouvert) {
+
+                  <span>
+
+                    {{ horaire.ouverture_1?.slice(0, 5) }}
+                    -
+                    {{ horaire.fermeture_1?.slice(0, 5) }}
+
+                    @if (horaire.ouverture_2) {
+                      et
+                      {{ horaire.ouverture_2?.slice(0, 5) }}
+                      -
+                      {{ horaire.fermeture_2?.slice(0, 5) }}
+                    }
+
+                  </span>
+
+                } @else {
+
+                  <span class="ferme" i18n>
+                    Fermé
+                  </span>
+
+                }
+
+              </div>
+
+            }
+
+          </div>
+
+        </div>
+
+
+        <div class="don-info-depot">
+
+          <i class="fa-solid fa-location-dot"></i>
+
+          <span i18n>
+            Les produits doivent être déposés uniquement à l'EPISE.
+          </span>
+
+        </div>
+
+
+      <div class="don-champ">
+
+        <label for="commentaire" i18n>
+          Commentaire (facultatif)
+        </label>
+
+        <textarea
+          class="don-textarea"
+          id="commentaire"
+          name="commentaire"
+          [(ngModel)]="commentaire"
+          placeholder="Votre message..."
+        ></textarea>
+
+      </div>
+
+    </fieldset>
+
+
+    <div class="don-certification">
+
+      <div class="certification-ligne">
+        <input
+          type="checkbox"
+          id="certification"
+          name="certification"
+          [(ngModel)]="certification"
+          [class.champ-erreur]="tentativeEnvoi && !certification"
+        >
+
+        <label for="certification" i18n>
+          Je certifie que les produits sont non ouverts.*
+        </label>
+      </div>
+
+      @if (tentativeEnvoi && !certification) {
+        <small class="erreur-champ">
+          Vous devez cocher cette case pour envoyer votre don.
+        </small>
+      }
+    </div>
+
+
+    <div class="don-submit">
+
+      <button
+        class="button primary"
+        type="submit"
+        [disabled]="envoiEnCours"
+        i18n
+      >
+        @if (envoiEnCours) {
+          Envoi en cours...
+        } @else {
+          Envoyer le don
+        }
+      </button>
+
+      <small class="mention-obligatoire" i18n>
+        * Champ obligatoire
+      </small>
+
+    </div>
+
+  </form>
+
+</div>

@@ -1,0 +1,24 @@
+<h2 i18n>Changer mon mot de passe</h2>
+
+<form (ngSubmit)="enregistrer()" class="container text-form">
+  @if (erreur()) {
+    <p class="message-erreur">{{ erreur() }}</p>
+  }
+  @if (message()) {
+    <p class="message-confirmation">{{ message() }}</p>
+  }
+
+  <label for="mdpActuel" i18n>Mot de passe actuel :</label>
+  <input type="password" id="mdpActuel" name="mdpActuel" class="text-input" [(ngModel)]="mdpActuel" required />
+
+  <label for="nouveauMdp" i18n>Nouveau mot de passe :</label>
+  <input type="password" id="nouveauMdp" name="nouveauMdp" class="text-input" [(ngModel)]="nouveauMdp" required />
+
+  <label for="nouveauMdpConfirm" i18n>Confirmer le nouveau mot de passe :</label>
+  <input type="password" id="nouveauMdpConfirm" name="nouveauMdpConfirm" class="text-input" [(ngModel)]="nouveauMdpConfirm" required />
+
+  <button type="submit" class="button primary" [disabled]="enCours()">
+    {{ enCours() ? 'Modification...' : 'Modifier le mot de passe' }}
+  </button>
+  <a routerLink="/mon-compte" class="button secondary" i18n>Retour à mon compte</a>
+</form>

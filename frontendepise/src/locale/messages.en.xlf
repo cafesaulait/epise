@@ -1,0 +1,1076 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="621353811577599471" datatype="html">
+        <source>Contactez-nous</source>
+        <target>Contact us</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3194196998588601997" datatype="html">
+        <source>Téléphone : (+687) 72.12.50</source>
+        <target>Phone number: (+687) 72.12.50</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4356813143670711660" datatype="html">
+        <source>E-mail : <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:epise@unc.nc&quot; target=&quot;_blank&quot;&gt;"/>epise@unc.nc<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <target>E-mail: <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:epise@unc.nc&quot; target=&quot;_blank&quot;&gt;"/>epise@unc.nc<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1865348435686234051" datatype="html">
+        <source>Messenger : <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;#&quot;&gt;"/>EPISE - L&apos;épicerie solidaire des étudiants<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <target>Messenger: <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;#&quot;&gt;"/>EPISE - The Student Solidarity Grocery Store<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.html</context>
+          <context context-type="linenumber">6,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5088573534878026695" datatype="html">
+        <source>Qui sommes-nous ?</source>
+        <target>About us</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/main.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5532033491569665455" datatype="html">
+        <source>Où sommes-nous ?</source>
+        <target>Where are we located?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/main.html</context>
+          <context context-type="linenumber">69,70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6485621504844891192" datatype="html">
+        <source>Faire un don</source>
+        <target>Donate</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.html</context>
+          <context context-type="linenumber">12,13</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/don/don.html</context>
+          <context context-type="linenumber">3,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2904068797291466876" datatype="html">
+        <source>Catalogue</source>
+        <target>Catalog</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.html</context>
+          <context context-type="linenumber">13,14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/catalogue/catalogue.html</context>
+          <context context-type="linenumber">2,4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/main.html</context>
+          <context context-type="linenumber">26,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8479815901423747189" datatype="html">
+        <source>Nouveautés</source>
+        <target>New arrivals</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/catalogue/catalogue.html</context>
+          <context context-type="linenumber">36,37</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/main.html</context>
+          <context context-type="linenumber">27,28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7860595597926666929" datatype="html">
+        <source>Catégories</source>
+        <target>Categories</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/catalogue/catalogue.html</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/main.html</context>
+          <context context-type="linenumber">48,49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4123744616703386227" datatype="html">
+        <source>Panier</source>
+        <target>Cart</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.html</context>
+          <context context-type="linenumber">16,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1551734854354896284" datatype="html">
+        <source>Mon compte</source>
+        <target>My account</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/moncompte/moncompte.html</context>
+          <context context-type="linenumber">1,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7164540129836416689" datatype="html">
+        <source>Mentions légales</source>
+        <target>Legal notice</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2061862249147457867" datatype="html">
+        <source>Politique de confidentialités</source>
+        <target>Privacy Policy</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2140036355828274656" datatype="html">
+        <source>© EPISE - Épicerie solidaire des étudiants - Université de la Nouvelle-Calédonie</source>
+        <target>© EPISE - The Student Solidarity Grocery Store - University of New Caledonia</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.html</context>
+          <context context-type="linenumber">28,29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2645988940119270988" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fa-solid fa-basket-shopping&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Panier <x id="START_BLOCK_IF" equiv-text="@if (panierService.nombreProduits() &gt; 0) {"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;panier-badge&quot;&gt;"/> <x id="INTERPOLATION" equiv-text="{{ panierService.nombreProduits() }}"/> <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="CLOSE_BLOCK_IF" equiv-text="}"/></source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fa-solid fa-basket-shopping&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Cart <x id="START_BLOCK_IF" equiv-text="@if (panierService.nombreProduits() &gt; 0) {"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;panier-badge&quot;&gt;"/> <x id="INTERPOLATION" equiv-text="{{ panierService.nombreProduits() }}"/> <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="CLOSE_BLOCK_IF" equiv-text="}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.html</context>
+          <context context-type="linenumber">16,25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="130523092410275164" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fa-solid fa-user&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Mon compte </source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fa-solid fa-user&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> My account </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.html</context>
+          <context context-type="linenumber">26,29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3476583629594890489" datatype="html">
+        <source>Accueil</source>.
+        <target>Home</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5076666453574425597" datatype="html">
+        <source> Qui sommes-nous ? </source>
+        <target> About us </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4909507493030141386" datatype="html">
+        <source> Catalogue </source>
+        <target> Catalog </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.html</context>
+          <context context-type="linenumber">38,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8467384976420188233" datatype="html">
+        <source> Faire un don </source>
+        <target> Donate </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.html</context>
+          <context context-type="linenumber">42,43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1850618973189856250" datatype="html">
+        <source> Où sommes-nous ? </source>
+        <target> Where are we located? </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.html</context>
+          <context context-type="linenumber">46,47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7852133740764518614" datatype="html">
+        <source>L&apos;inscription à l&apos;EPISE se fait sur place pour un montant de 200frs pour l&apos;adhésion à l&apos;année. Tous les produits sont gratuits avec une restriction de 5 produits par passage et de 2 passages par semaine.</source>
+        <target>Registration at the EPISE is done on site for an amount of 200 francs for the annual membership. All products are free with a restriction of 5 products per passage and 2 passages per week.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/catalogue/catalogue.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7505944848452599707" datatype="html">
+        <source> Résultats pour : <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION" equiv-text="{{ recherche() }}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> (<x id="INTERPOLATION_1" equiv-text="{{ produitsFiltres().length }}"/> produit<x id="INTERPOLATION_2" equiv-text="{{ produitsFiltres().length &gt; 1 ? &apos;s&apos; : &apos;&apos; }}"/>) — <x id="START_LINK" ctype="x-a" equiv-text="&lt;a routerLink=&quot;/produits&quot;&gt;"/>Voir tout le catalogue<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <target> Results for: <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION" equiv-text="{{ recherche() }}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> (<x id="INTERPOLATION_1" equiv-text="{{ produitsFiltres().length }}"/> product<x id="INTERPOLATION_2" equiv-text="{{ produitsFiltres().length &gt; 1 ? &apos;s&apos; : &apos;&apos; }}"/>) — <x id="START_LINK" ctype="x-a" equiv-text="&lt;a routerLink=&quot;/produits&quot;&gt;"/>See the whole catalog<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/catalogue/catalogue.html</context>
+          <context context-type="linenumber">8,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1483303956426298113" datatype="html">
+        <source>Aucun produit ne correspond à votre recherche.</source>
+        <target>There are no products matching your search.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/catalogue/catalogue.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="70397346439942337" datatype="html">
+        <source>Ajouter</source>
+        <target>Add to cart</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/catalogue/catalogue.html</context>
+          <context context-type="linenumber">28,29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/catalogue/catalogue.html</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/catalogue/catalogue.html</context>
+          <context context-type="linenumber">71,72</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/catalogue/catalogue.html</context>
+          <context context-type="linenumber">92,93</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/main.html</context>
+          <context context-type="linenumber">40,41</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/produit-detail/produit-detail.html</context>
+          <context context-type="linenumber">13,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3926533736832482089" datatype="html">
+        <source>Voir</source>
+        <target>View details</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/catalogue/catalogue.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/catalogue/catalogue.html</context>
+          <context context-type="linenumber">50,51</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/catalogue/catalogue.html</context>
+          <context context-type="linenumber">72,73</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/catalogue/catalogue.html</context>
+          <context context-type="linenumber">93,94</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/main.html</context>
+          <context context-type="linenumber">41,42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1129409594463485436" datatype="html">
+        <source>Tous les produits</source>
+        <target>All Products</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/catalogue/catalogue.html</context>
+          <context context-type="linenumber">79,80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="908425206314291309" datatype="html">
+        <source>Changer mon mot de passe</source>
+        <target>Change my password</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/changer-mdp/changer-mdp.html</context>
+          <context context-type="linenumber">1,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6472101675708716914" datatype="html">
+        <source>Mot de passe actuel :</source>
+        <target>Current Password:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/changer-mdp/changer-mdp.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="295678937308940689" datatype="html">
+        <source>Nouveau mot de passe :</source>
+        <target>New password:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/changer-mdp/changer-mdp.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1630856918572521074" datatype="html">
+        <source>Confirmer le nouveau mot de passe :</source>
+        <target>Confirm the new password:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/changer-mdp/changer-mdp.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5755501991251074827" datatype="html">
+        <source>Retour à mon compte</source>
+        <target>Back to my account</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/changer-mdp/changer-mdp.html</context>
+          <context context-type="linenumber">23,24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/modifier-infos/modifier-infos.html</context>
+          <context context-type="linenumber">23,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6103118278620987967" datatype="html">
+        <source>Connexion</source>
+        <target>Connexion</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/connexion/connexion.html</context>
+          <context context-type="linenumber">3,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1774656326866636941" datatype="html">
+        <source> Connectez-vous à votre compte pour avoir accès à vos informations. </source>
+        <target> Log in to your account to access your information. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/connexion/connexion.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7587649439518845048" datatype="html">
+        <source> Adresse e-mail : </source>
+        <target> Email address: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/connexion/connexion.html</context>
+          <context context-type="linenumber">20,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2869098930259495963" datatype="html">
+        <source> Mot de passe : </source>
+        <target> Password: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/connexion/connexion.html</context>
+          <context context-type="linenumber">35,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6427857063790152182" datatype="html">
+        <source><x id="START_BLOCK_IF" equiv-text="@if (enCours()) {"/> Connexion... <x id="CLOSE_BLOCK_IF" equiv-text="}"/><x id="START_BLOCK_ELSE" equiv-text="@else {"/> Connexion <x id="CLOSE_BLOCK_ELSE" equiv-text="}"/></source>
+        <target><x id="START_BLOCK_IF" equiv-text="@if (enCours()) {"/> Connexion... <x id="CLOSE_BLOCK_IF" equiv-text="}"/><x id="START_BLOCK_ELSE" equiv-text="@else {"/> Connexion <x id="CLOSE_BLOCK_ELSE" equiv-text="}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/connexion/connexion.html</context>
+          <context context-type="linenumber">53,60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="494358940363131573" datatype="html">
+        <source> Vous n’avez pas de compte ? </source>
+        <target> Don't have an account? </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/connexion/connexion.html</context>
+          <context context-type="linenumber">63,64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8527368151169290219" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fa-solid fa-user-plus&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Créer un compte </source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fa-solid fa-user-plus&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Create an account </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/connexion/connexion.html</context>
+          <context context-type="linenumber">70,72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1847466303514167048" datatype="html">
+        <source>Créer un compte</source>
+        <target>Create an account</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/creationcompte/creationcompte.html</context>
+          <context context-type="linenumber">3,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5457945878436021391" datatype="html">
+        <source>Remplissez le formulaire pour créer votre compte étudiant.</source>
+        <target>Fill out the form to create your student account.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/creationcompte/creationcompte.html</context>
+          <context context-type="linenumber">9,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6696108412114163418" datatype="html">
+        <source>Nom :</source>
+        <target>Name:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/creationcompte/creationcompte.html</context>
+          <context context-type="linenumber">23,25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/modifier-infos/modifier-infos.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="252747989080528171" datatype="html">
+        <source>Prénom :</source>
+        <target>First name:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/creationcompte/creationcompte.html</context>
+          <context context-type="linenumber">27,29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/modifier-infos/modifier-infos.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3722563691773183942" datatype="html">
+        <source>Adresse mail :</source>
+        <target>Email address:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/creationcompte/creationcompte.html</context>
+          <context context-type="linenumber">31,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6077046603251494501" datatype="html">
+        <source>Mot de passe :</source>
+        <target>Password:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/creationcompte/creationcompte.html</context>
+          <context context-type="linenumber">35,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1258973556056227243" datatype="html">
+        <source> Confirmation du mot de passe : </source>
+        <target> Password confirmation: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/creationcompte/creationcompte.html</context>
+          <context context-type="linenumber">40,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3936291162269029250" datatype="html">
+        <source> Les mots de passe ne sont pas identiques. </source>
+        <target> Passwords are not the same. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/creationcompte/creationcompte.html</context>
+          <context context-type="linenumber">47,48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3729955325115528811" datatype="html">
+        <source>Vous êtes :</source>
+        <target>You are:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/creationcompte/creationcompte.html</context>
+          <context context-type="linenumber">51,53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8123847327629195460" datatype="html">
+        <source>Bénéficiaire (je viens chercher des produits)</source>
+        <target>Beneficiary (I come to pick up products)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/creationcompte/creationcompte.html</context>
+          <context context-type="linenumber">59,60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4246012278125735409" datatype="html">
+        <source>Donateur (je fais des dons)</source>
+        <target>Donor (I donate)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/creationcompte/creationcompte.html</context>
+          <context context-type="linenumber">60,61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6161314860637941804" datatype="html">
+        <source>Vous avez déjà un compte ?</source>
+        <target>Already have an account?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/creationcompte/creationcompte.html</context>
+          <context context-type="linenumber">75,77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7348903976746591849" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fa-solid fa-user&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Se connecter </source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fa-solid fa-user&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Log in </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/creationcompte/creationcompte.html</context>
+          <context context-type="linenumber">78,80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4823367305014636262" datatype="html">
+        <source>Vérification de votre adresse e-mail</source>
+        <target>Verifying your email address</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/creationcompte/creationcompte.html</context>
+          <context context-type="linenumber">89,90</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5410568639362363945" datatype="html">
+        <source> Un e-mail de confirmation a été envoyé à <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION" equiv-text="{{ email }}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. </source>
+        <target> A confirmation email has been sent to <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION" equiv-text="{{ email }}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/creationcompte/creationcompte.html</context>
+          <context context-type="linenumber">91,93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6032354681849830399" datatype="html">
+        <source> Cliquez sur le lien qu&apos;il contient pour valider votre adresse et créer votre compte. </source>
+        <target> Click on the link in the link to verify your address and create your account. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/creationcompte/creationcompte.html</context>
+          <context context-type="linenumber">94,95</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5036641628193411364" datatype="html">
+        <source> Annuler </source>
+        <target> Cancel </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/creationcompte/creationcompte.html</context>
+          <context context-type="linenumber">116,117</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8247048348056444789" datatype="html">
+        <source>Produits donnés</source>
+        <target>Donated products</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/don/don.html</context>
+          <context context-type="linenumber">22,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5078979705928085403" datatype="html">
+        <source>Catégorie*</source>
+        <target>Category*</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/don/don.html</context>
+          <context context-type="linenumber">33,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6000383990221242790" datatype="html">
+        <source> Sélectionner </source>
+        <target> Select </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/don/don.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="736399899387672107" datatype="html">
+        <source> Autre </source>
+        <target> Other </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/don/don.html</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2225048692107799216" datatype="html">
+        <source> Nouvelle catégorie proposée* </source>
+        <target> Proposed New Category* </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/don/don.html</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1086027136653904511" datatype="html">
+        <source> Cette catégorie sera proposée à l&apos;équipe de l&apos;EPISE. </source>
+        <target> This category will be offered to the EPISE team. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/don/don.html</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7302742587198929351" datatype="html">
+        <source>Produit*</source>
+        <target>Product*</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/don/don.html</context>
+          <context context-type="linenumber">92,94</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9135076834317306544" datatype="html">
+        <source>Quantité*</source>
+        <target>Quantity*</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/don/don.html</context>
+          <context context-type="linenumber">109,111</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7452189515614581291" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fa-solid fa-trash-can&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Supprimer </source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fa-solid fa-trash-can&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Delete </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/don/don.html</context>
+          <context context-type="linenumber">132,135</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6834267686753831172" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fa-solid fa-plus&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Ajouter un produit </source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fa-solid fa-plus&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Add a product </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/don/don.html</context>
+          <context context-type="linenumber">150,153</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2795543644674352053" datatype="html">
+        <source>Informations du don</source>
+        <target>Donation Information</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/don/don.html</context>
+          <context context-type="linenumber">161,163</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3831632275759713982" datatype="html">
+        <source> Date de passage* </source>
+        <target> Passage Date* </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/don/don.html</context>
+          <context context-type="linenumber">168</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5783343142404738453" datatype="html">
+        <source> Heure de passage* </source>
+        <target> Time of passage* </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/don/don.html</context>
+          <context context-type="linenumber">185</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6404558627948948859" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fa-solid fa-clock&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Horaires de l&apos;EPISE<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fa-solid fa-clock&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>EPISE opening hours<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/don/don.html</context>
+          <context context-type="linenumber">205,209</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5335372578060743492" datatype="html">
+        <source> Fermé </source>
+        <target> Closed </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/don/don.html</context>
+          <context context-type="linenumber">239</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="472678256919626390" datatype="html">
+        <source> Les produits doivent être déposés uniquement à l&apos;EPISE. </source>
+        <target> Products must be deposited only at the EPISE. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/don/don.html</context>
+          <context context-type="linenumber">258</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/don/don.html</context>
+          <context context-type="linenumber">268</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2642260683475928073" datatype="html">
+        <source> Commentaire (facultatif) </source>
+        <target> Comment (optional) </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/don/don.html</context>
+          <context context-type="linenumber">277,278</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6011396879888471451" datatype="html">
+        <source> Je certifie que les produits sont non ouverts. </source>
+        <target> I certify that the products are unopened. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/don/don.html</context>
+          <context context-type="linenumber">305,306</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9030862968022402128" datatype="html">
+        <source> Cochez la certification pour pouvoir envoyer votre don. </source>
+        <target> Check the certification to be able to send your donation. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/don/don.html</context>
+          <context context-type="linenumber">321</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2294863980843243742" datatype="html">
+        <source>L&apos;EPISE</source>
+        <target>EPISE</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/main.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3084360994483711886" datatype="html">
+        <source> L&apos;EPISE, une épicerie pas comme les autres. L&apos;EPISE, c&apos;est l&apos;épicerie solidaire de l&apos;Université de la Nouvelle-Calédonie. Elle a été créée pour aider les étudiants en situation de précarité à accéder plus facilement et GRATUITEMENT* à des produits de première nécessité : alimentation, hygiène, fournitures scolaires… *200frs pour l&apos;adhésion à l&apos;année, inscription sur place. </source>
+        <target> L'EPISE, a grocery store like no other. L'EPISE is the solidarity grocery store of the University of New Caledonia. It was created to help students in precarious situations to access more easily and FREE* basic necessities: food, hygiene, school supplies... *200frs for the annual membership, registration on site. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/main.html</context>
+          <context context-type="linenumber">7,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4001862895008560220" datatype="html">
+        <source>Comment faire un don ?</source>
+        <target>How to make a donation?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/main.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1847975211566995780" datatype="html">
+        <source> Pour effectuer un don alimentaire, il vous suffit d&apos;apporter le produit que vous souhaitez offrir, par exemple des denrées non périssables telles que des conserves ou des produits disposant d&apos;une date de consommation suffisamment longue (au moins deux ans à partir de la date actuelle).
+        Ensuite, il vous sera demandé de renseigner les informations nécessaires, notamment le nom du produit, la quantité ainsi que sa catégorie. </source>
+        <target>To make a food donation, all you have to do is bring the product you want to donate, for example non-perishable food items such as canned goods or products with a sufficiently long use-by date (at least two years from the current date). Next, you will be asked to fill in the necessary information, including the name of the product, the quantity and its category.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/main.html</context>
+          <context context-type="linenumber">18,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5777706132167375851" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fa-solid fa-cart-shopping&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Tout afficher</source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fa-solid fa-cart-shopping&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Show all</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/main.html</context>
+          <context context-type="linenumber">64,67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6295061042243494964" datatype="html">
+        <source>Retrouvez l&apos;EPISE en face de la Maison de l&apos;Étudiant, à proximité du terrain de sport.</source>
+        <target>Find the EPISE in front of the Maison de l'Étudiant, near the sports field.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/main.html</context>
+          <context context-type="linenumber">70,71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6675418159272486191" datatype="html">
+        <source>Voir en plein écran</source>
+        <target>View in full screen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/main.html</context>
+          <context context-type="linenumber">72,73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6828598022244094950" datatype="html">
+        <source>Mes commandes</source>
+        <target>My orders</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/mes-commandes/mes-commandes.html</context>
+          <context context-type="linenumber">1,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1214918588838975497" datatype="html">
+        <source>Vous n&apos;avez pas encore passé de commande.</source>
+        <target>You haven't placed an order yet.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/mes-commandes/mes-commandes.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7458901075126609817" datatype="html">
+        <source>Commande</source>
+        <target>Order</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/mes-commandes/mes-commandes.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3973931101896534797" datatype="html">
+        <source>Date</source>
+        <target>Date</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/mes-commandes/mes-commandes.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1713271461473302108" datatype="html">
+        <source>Mode</source>
+        <target>Mode</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/mes-commandes/mes-commandes.html</context>
+          <context context-type="linenumber">16,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8082457873976315045" datatype="html">
+        <source>Statut</source>
+        <target>Status</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/mes-commandes/mes-commandes.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9216117865911519658" datatype="html">
+        <source>Action</source>
+        <target>Action</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/mes-commandes/mes-commandes.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6161162441412065699" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fa-solid fa-xmark&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Annuler </source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fa-solid fa-xmark&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Cancel </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/mes-commandes/mes-commandes.html</context>
+          <context context-type="linenumber">62,64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7449379287933794282" datatype="html">
+        <source>Commande récupérée</source>
+        <target>Retrieved order</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/mes-commandes/mes-commandes.html</context>
+          <context context-type="linenumber">68,70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6291258697510366664" datatype="html">
+        <source>Commande annulée</source>
+        <target>Order cancelled</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/mes-commandes/mes-commandes.html</context>
+          <context context-type="linenumber">72,74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5010424494936338604" datatype="html">
+        <source>Non disponible</source>
+        <target>Not available</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/mes-commandes/mes-commandes.html</context>
+          <context context-type="linenumber">76,78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7429591958646544643" datatype="html">
+        <source> Retour à mon compte</source>
+        <target> Back to my account</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/mes-commandes/mes-commandes.html</context>
+          <context context-type="linenumber">88,89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="937667075202340373" datatype="html">
+        <source>Modifier mes informations</source>
+        <target>Change my information</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/modifier-infos/modifier-infos.html</context>
+          <context context-type="linenumber">1,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="332945810415380483" datatype="html">
+        <source>Bienvenue sur votre compte, <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/><x id="INTERPOLATION" equiv-text="{{ utilisateur.prenom }}"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> !</source>
+        <target>Welcome to your account,<x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/><x id="INTERPOLATION" equiv-text="{{ utilisateur.prenom }}"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/moncompte/moncompte.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5457839794388071425" datatype="html">
+        <source>Voici les informations de votre compte :</source>
+        <target>Here is your account information:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/moncompte/moncompte.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6080527112828310966" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Nom :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> <x id="INTERPOLATION" equiv-text="{{ utilisateur.nom }}"/></source>
+        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Name:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> <x id="INTERPOLATION" equiv-text="{{ utilisateur.nom }}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/moncompte/moncompte.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2471776507095164821" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Prénom :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> <x id="INTERPOLATION" equiv-text="{{ utilisateur.prenom }}"/></source>
+        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>First name:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> <x id="INTERPOLATION" equiv-text="{{ utilisateur.prenom }}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/moncompte/moncompte.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1166524425209963822" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Email :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> <x id="INTERPOLATION" equiv-text="{{ utilisateur.email }}"/></source>
+        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Email:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> <x id="INTERPOLATION" equiv-text="{{ utilisateur.email }}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/moncompte/moncompte.html</context>
+          <context context-type="linenumber">10,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="87167586672690999" datatype="html">
+        <source><x id="START_LINK" ctype="x-a" equiv-text="&lt;a routerLink=&quot;/mon-compte/modifier&quot;&gt;"/>Modifier mes informations<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <target><x id="START_LINK" ctype="x-a" equiv-text="&lt;a routerLink=&quot;/mon-compte/modifier&quot;&gt;"/>Change my information<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/moncompte/moncompte.html</context>
+          <context context-type="linenumber">13,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5087794080927009212" datatype="html">
+        <source><x id="START_LINK" ctype="x-a" equiv-text="&lt;a routerLink=&quot;/mon-compte/changer-mdp&quot;&gt;"/>Changer mon mot de passe<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <target><x id="START_LINK" ctype="x-a" equiv-text="&lt;a routerLink=&quot;/mon-compte/changer-mdp&quot;&gt;"/>Change my password<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/moncompte/moncompte.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5744890780356731775" datatype="html">
+        <source><x id="START_LINK" ctype="x-a" equiv-text="&lt;a routerLink=&quot;/mon-compte/commandes&quot;&gt;"/>Voir mes commandes<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <target><x id="START_LINK" ctype="x-a" equiv-text="&lt;a routerLink=&quot;/mon-compte/commandes&quot;&gt;"/>See my orders<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/moncompte/moncompte.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4995302965878971543" datatype="html">
+        <source><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;#&quot; (click)=&quot;$event.preventDefault(); seDeconnecter()&quot;&gt;"/>Se déconnecter<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <target><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;#&quot; (click)=&quot;$event.preventDefault(); seDeconnecter()&quot;&gt;"/>Log out<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/moncompte/moncompte.html</context>
+          <context context-type="linenumber">16,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7472052211508942532" datatype="html">
+        <source><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;#&quot; (click)=&quot;$event.preventDefault(); supprimerCompte()&quot;&gt;"/>Supprimer mon compte<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <target><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;#&quot; (click)=&quot;$event.preventDefault(); supprimerCompte()&quot;&gt;"/>Delete my account<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/moncompte/moncompte.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5854734620247388418" datatype="html">
+        <source>Vous n&apos;êtes pas connecté.</source>
+        <target>You're not logged in.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/moncompte/moncompte.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3134007804471580122" datatype="html">
+        <source><x id="START_LINK" ctype="x-a" equiv-text="&lt;a routerLink=&quot;/connexion&quot;&gt;"/>Se connecter<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <target><x id="START_LINK" ctype="x-a" equiv-text="&lt;a routerLink=&quot;/connexion&quot;&gt;"/>Login<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/moncompte/moncompte.html</context>
+          <context context-type="linenumber">20,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9147425231067377581" datatype="html">
+        <source><x id="START_LINK" ctype="x-a" equiv-text="&lt;a routerLink=&quot;/creation-compte&quot;&gt;"/>Créer un compte<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <target><x id="START_LINK" ctype="x-a" equiv-text="&lt;a routerLink=&quot;/creation-compte&quot;&gt;"/>Create an account<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/moncompte/moncompte.html</context>
+          <context context-type="linenumber">21,22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6834360127963464847" datatype="html">
+        <source>Mon panier</source>
+        <target>Cart</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/panier/panier.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8699521548267545924" datatype="html">
+        <source>Chargement du panier...</source>
+        <target>Loading the cart...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/panier/panier.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6095357695778876239" datatype="html">
+        <source>Article</source>
+        <target>Article</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/panier/panier.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7013342739706915791" datatype="html">
+        <source>Quantité</source>
+        <target>Quantity</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/panier/panier.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6403075650144550602" datatype="html">
+        <source>Votre panier est vide.</source>
+        <target>Your cart is empty.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/panier/panier.html</context>
+          <context context-type="linenumber">62,64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7308432105867546221" datatype="html">
+        <source>Nombre d&apos;articles</source>
+        <target>Number of Items</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/panier/panier.html</context>
+          <context context-type="linenumber">77,79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3579615593154916017" datatype="html">
+        <source>*L&apos;inscription à l&apos;EPISE se fait sur place pour un montant de 200frs pour l&apos;adhésion à l&apos;année. Tous les produits sont gratuits avec une restriction de 5 produits par passage et de 2 passages par semaine. Si c&apos;est la première fois que vous venez à l&apos;EPISE, prévoyez 200 francs de frais d&apos;inscription lors de votre premier passage.</source>
+        <target>*Registration at EPISE is done on site for an amount of 200 francs for annual membership. All products are free with a restriction of 5 products per visit and 2 visits per week. If this is your first time at EPISE, plan for a 200 franc registration fee for your first visit.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/panier/panier.html</context>
+          <context context-type="linenumber">88,90</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6482652570555038675" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fa-solid fa-circle-check&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/><x id="START_BLOCK_IF" equiv-text="@if (commandeEnCours()) {"/> Validation en cours... <x id="CLOSE_BLOCK_IF" equiv-text="}"/><x id="START_BLOCK_ELSE" equiv-text="@else {"/> Valider ma commande <x id="CLOSE_BLOCK_ELSE" equiv-text="}"/></source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fa-solid fa-circle-check&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/><x id="START_BLOCK_IF" equiv-text="@if (commandeEnCours()) {"/> Validation in progress... <x id="CLOSE_BLOCK_IF" equiv-text="}"/><x id="START_BLOCK_ELSE" equiv-text="@else {"/> Confirm my order <x id="CLOSE_BLOCK_ELSE" equiv-text="}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/panier/panier.html</context>
+          <context context-type="linenumber">98,105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5103768549759417508" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fa-solid fa-print&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Imprimer ma liste </source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fa-solid fa-print&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Print my list </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/panier/panier.html</context>
+          <context context-type="linenumber">112,116</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5831993056823946462" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fa-solid fa-trash-can&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Vider le panier </source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fa-solid fa-trash-can&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Empty cart </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/panier/panier.html</context>
+          <context context-type="linenumber">122,126</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4705171768901614799" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fa-solid fa-arrow-left-long&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Continuer mes achats </source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fa-solid fa-arrow-left-long&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Continue shopping </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/panier/panier.html</context>
+          <context context-type="linenumber">144,150</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3604879205805883597" datatype="html">
+        <source>Retour à la liste des produits</source>
+        <target>Back to the product list</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/produit-detail/produit-detail.html</context>
+          <context context-type="linenumber">18,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3888670896707935899" datatype="html">
+        <source>Ce produit n&apos;existe pas ou n&apos;est plus disponible.</source>
+        <target>This product does not exist or is no longer available.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/produit-detail/produit-detail.html</context>
+          <context context-type="linenumber">21,23</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

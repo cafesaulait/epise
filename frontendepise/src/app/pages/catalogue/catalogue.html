@@ -1,0 +1,99 @@
+<div class="catalogue">
+  <h1 i18n>Catalogue</h1>
+
+  <p i18n>L'inscription à l'EPISE se fait sur place pour un montant de 200frs pour l'adhésion à l'année. Tous les produits sont gratuits avec une restriction de 5 produits par passage et de 2 passages par semaine.</p>
+
+  @if (recherche()) {
+    <p class="recherche-info" i18n>
+      Résultats pour : <strong>{{ recherche() }}</strong>
+      ({{ produitsFiltres().length }} produit{{ produitsFiltres().length > 1 ? 's' : '' }})
+      — <a routerLink="/produits">Voir tout le catalogue</a>
+    </p>
+
+    @if (produitsFiltres().length === 0) {
+      <p class="aucun-resultat" i18n>Aucun produit ne correspond à votre recherche.</p>
+    } @else {
+      <div class="grid">
+        @for (produit of produitsFiltres(); track produit.id_produit) {
+          <a [routerLink]="['/produits', produit.id_produit]">
+            <div class="carte">
+              <img
+                [src]="produit.image
+                  ? '/asset/img/produits/' + produit.image
+                  : '/asset/img/produits/default.png'"
+                [alt]="produit.nom"
+              />
+              <h3>{{ produit.nom }}</h3>
+              <p>{{ produit.description | slice:0:30 }}</p>
+              <button class="button primary" (click)="$event.preventDefault(); $event.stopPropagation(); ajouterAuPanier(produit)" i18n>Ajouter</button>
+              <button class="button secondary" i18n>Voir</button>
+            </div>
+          </a>
+        }
+      </div>
+    }
+  } @else {
+    <h2 id="nouveautes" i18n>Nouveautés</h2>
+    <div class="grid">
+      @for (produit of nouveautes(); track produit.id_produit) {
+        <a [routerLink]="['/produits', produit.id_produit]">
+          <div class="carte">
+            <img
+                [src]="produit.image
+                  ? '/asset/img/produits/' + produit.image
+                  : '/asset/img/produits/default.png'"
+                [alt]="produit.nom"
+              />
+            <h3>{{ produit.nom }}</h3>
+            <p>{{ produit.description | slice:0:30 }}</p>
+            <button class="button primary" (click)="$event.preventDefault(); $event.stopPropagation(); ajouterAuPanier(produit)" i18n>Ajouter</button>
+            <button class="button secondary" i18n>Voir</button>
+          </div>
+        </a>
+      }
+    </div>
+
+    <h2 id="categories" i18n>Catégories</h2>
+    @for (categorie of categories(); track categorie.id_categorie) {
+      <h3 id="cat-{{ categorie.id_categorie }}">{{ categorie.nom }}</h3>
+      <div class="grid">
+        @for (produit of produitsDeCategorie(categorie.id_categorie); track produit.id_produit) {
+          <a [routerLink]="['/produits', produit.id_produit]">
+            <div class="carte">
+              <img
+                [src]="produit.image
+                  ? '/asset/img/produits/' + produit.image
+                  : '/asset/img/produits/default.png'"
+                [alt]="produit.nom"
+              />
+              <h3>{{ produit.nom }}</h3>
+              <p>{{ produit.description | slice:0:30 }}</p>
+              <button class="button primary" (click)="$event.preventDefault(); $event.stopPropagation(); ajouterAuPanier(produit)" i18n>Ajouter</button>
+              <button class="button secondary" i18n>Voir</button>
+            </div>
+          </a>
+        }
+      </div>
+    }
+
+    <h2 i18n>Tous les produits</h2>
+    <div class="grid">
+      @for (produit of produits(); track produit.id_produit) {
+        <a [routerLink]="['/produits', produit.id_produit]">
+          <div class="carte">
+            <img
+                [src]="produit.image
+                  ? '/asset/img/produits/' + produit.image
+                  : '/asset/img/produits/default.png'"
+                [alt]="produit.nom"
+              />
+            <h3>{{ produit.nom }}</h3>
+            <p>{{ produit.description | slice:0:30 }}</p>
+            <button class="button primary" (click)="$event.preventDefault(); $event.stopPropagation(); ajouterAuPanier(produit)" i18n>Ajouter</button>
+            <button class="button secondary" i18n>Voir</button>
+          </div>
+        </a>
+      }
+    </div>
+  }
+</div>

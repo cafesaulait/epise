@@ -1,0 +1,77 @@
+
+/* Barre du haut : logo + recherche + liens */
+header div {
+    background-color:#1A3A5C;
+    padding: 14px 32px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header div img {
+    height: 50px;
+}
+
+header div input {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    max-width: 50vw;
+    min-width: 30vw;
+    margin: auto;
+}
+
+header div a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+header div i {
+    font-size: 15px;
+}
+
+header div a:hover {
+    text-decoration: underline;
+}
+
+/* Barre de navigation */
+header nav {
+    background-color:#1F507D;
+    padding: 0 32px;
+    display: flex;
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 12px 20px;
+    display: block;
+}
+
+header nav a:hover {
+    background-color: #27639C;;
+}
+
+.panier-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 18px;
+    height: 18px;
+
+    margin-left: 4px;
+
+    background-color: #2BA37A;
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    line-height: 1;
+}

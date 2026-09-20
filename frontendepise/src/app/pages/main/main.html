@@ -1,0 +1,77 @@
+<!-- Section : Qui sommes-nous ? -->
+<section class="section-qui" id="qui-sommes-nous">
+  <h1 i18n>L'EPISE</h1>
+  <h2 i18n>Qui sommes-nous ?</h2>
+  <img class="section-img" src="/asset/img/entraide.jpg" alt="Qui sommes-nous">
+  <p i18n>
+   L'EPISE, une épicerie pas comme les autres. L'EPISE, c'est l'épicerie solidaire de l'Université de la Nouvelle-Calédonie.
+    Elle a été créée pour aider les étudiants en situation de précarité à accéder plus facilement et GRATUITEMENT* à des produits de première nécessité : alimentation, hygiène, fournitures scolaires…  
+    *200frs pour l'adhésion à l'année, inscription sur place.
+  </p>
+</section>
+
+<!-- Section : Comment faire un don ? -->
+<section class="section-don" id="faire-un-don">
+  <h2 i18n>Comment faire un don ?</h2>
+  <img class="section-img" src="/asset/img/food_donation.jpg" alt="Faire un don">
+  <p i18n>
+    Pour effectuer un don alimentaire, il vous suffit d'apporter le produit que vous souhaitez offrir, par exemple des denrées non périssables telles que des conserves ou des produits disposant d'une date de consommation suffisamment longue (au moins deux ans à partir de la date actuelle).
+Ensuite, il vous sera demandé de renseigner les informations nécessaires, notamment le nom du produit, la quantité ainsi que sa catégorie. 
+  </p>
+  <a routerLink="/don" class="button primary">
+    <i class="fa-solid fa-hand-holding-heart"></i>
+    Faire un don
+    <i class="fa-solid fa-arrow-right-long"></i>
+  </a>
+</section>
+
+<!-- Section : Catalogue -->
+<section class="section-catalogue">
+  <h2 i18n>Catalogue</h2>
+  <h3 id="nouveautes" i18n>Nouveautés</h3>
+  <div class="catalogue-nouveautes">
+    @for (produit of nouveautes(); track produit.id_produit) {
+      <a [routerLink]="['/produits', produit.id_produit]">
+        <div class="carte">
+          <img
+                [src]="produit.image
+                  ? '/asset/img/produits/' + produit.image
+                  : '/asset/img/produits/default.png'"
+                [alt]="produit.nom"
+              />
+          <h3>{{ produit.nom }}</h3>
+          <p>{{ produit.description }}</p>
+          <button class="button primary" (click)="$event.preventDefault(); $event.stopPropagation(); ajouterAuPanier(produit)" i18n>Ajouter</button>
+          <button class="button secondary" i18n>Voir</button>
+        </div>
+      </a>
+    }
+  </div>
+
+  <!-- Catégories -->
+  <h3 id="categories" i18n>Catégories</h3>
+  <ul class="catalogue-categories">
+    @for (categorie of categories(); track categorie.id_categorie) {
+      <li>
+        <a [routerLink]="['/produits']" [queryParams]="{ categorie: categorie.id_categorie }">
+          <img
+            [src]="categorie.image
+              ? '/asset/img/categories/' + categorie.image
+              : '/asset/img/categories/default.png'"
+            [alt]="categorie.nom"
+          />
+          <p>{{ categorie.nom }}</p>
+        </a>
+      </li>
+    }
+  </ul>
+  <a routerLink="/catalogue" class="button tertiary" i18n><i class="fa-solid fa-cart-shopping"></i> Tout afficher</a>
+</section>
+
+<!-- Section : Où sommes-nous ? -->
+<section class="section-ou" id="ou-sommes-nous">
+  <h2 i18n>Où sommes-nous ?</h2>
+  <p i18n>Retrouvez l'EPISE en face de la Maison de l'Étudiant, à proximité du terrain de sport.</p>
+  <address>145, Avenue James Cook - BP R4, Nouméa, New Caledonia, 98851</address>
+  <iframe style="width: 100%; height: 300px; border: 0;" allowfullscreen allow="geolocation" src="//umap.openstreetmap.fr/fr/map/carte-de-lepise_1455350?scaleControl=false&miniMapControl=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true"></iframe><p><a href="//umap.openstreetmap.fr/fr/map/carte-de-lepise_1455350?scaleControl=false&miniMapControl=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true" i18n>Voir en plein écran</a></p>
+</section>

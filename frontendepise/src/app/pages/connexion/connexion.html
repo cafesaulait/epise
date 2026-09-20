@@ -1,0 +1,80 @@
+<div class="connexion">
+
+  <h1 i18n>Connexion</h1>
+
+  <div class="container text-form">
+
+    <form (ngSubmit)="seConnecter()">
+
+      <h3 i18n>
+        Connectez-vous à votre compte pour avoir accès à vos informations.
+      </h3>
+
+      @if (erreur()) {
+        <p class="message-erreur">
+          {{ erreur() }}
+        </p>
+      }
+
+      <label for="login" i18n>
+        Adresse e-mail :
+      </label>
+
+      <input
+        type="email"
+        placeholder="mail.exemple@gmail.com"
+        name="email"
+        id="login"
+        class="text-input"
+        [(ngModel)]="email"
+        required
+        autofocus
+      >
+
+      <label for="password" i18n>
+        Mot de passe :
+      </label>
+
+      <input
+        type="password"
+        placeholder="Tapez votre mot de passe ici..."
+        name="mdp"
+        id="password"
+        class="text-input"
+        [(ngModel)]="mdp"
+        required
+      >
+
+      <button
+        type="submit"
+        class="button primary"
+        [disabled]="enCours()"
+       i18n>
+        @if (enCours()) {
+          Connexion...
+        } @else {
+          Connexion
+        }
+      </button>
+
+      <div class="account-creation">
+
+        <p i18n>
+          Vous n’avez pas de compte ?
+        </p>
+
+        <a
+          routerLink="/creation-compte"
+          class="button secondary"
+         i18n>
+          <i class="fa-solid fa-user-plus"></i>
+          Créer un compte
+        </a>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>

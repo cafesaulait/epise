@@ -1,0 +1,152 @@
+<div class="panier-page">
+  <h1 i18n>Mon panier</h1>
+  @if (chargement()) {
+    <p i18n>Chargement du panier...</p>
+  } @else if (erreur()) {
+    <p class="message-erreur">{{ erreur() }}</p>
+  } @else if (panier(); as p) {
+    <div class="tables">
+      <!-- PANIER -->
+      <table id="panier" class="panier">
+        <thead>
+          <tr>
+            <th></th>
+            <th i18n>Article</th>
+            <th i18n>Quantité</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (item of p.items; track item.id_produit) {
+            <tr>
+              <!-- IMAGE -->
+              <td>
+                <img src="/asset/img/produits/{{ item.image }}" alt="{{ item.nom }}" class="panier-image">
+              </td>
+
+              <!-- PRODUIT -->
+              <td>
+                <strong>{{ item.nom }}</strong>
+
+                @if (item.description) {
+                  <p>{{ item.description }}</p>
+                }
+
+              </td>
+              <!-- QUANTITÉ -->
+              <td>
+                <div class="quantite">
+                  <button type="button" class="button secondary" (click)="diminuer(item)" [disabled]="item.quantite <= 1">−</button>
+
+                  <span>{{ item.quantite }}</span>
+
+                  <button type="button" class="button secondary" (click)="augmenter(item)" [disabled]=" item.quantite >= item.stock || totalArticles() >= 5">+</button>
+
+                </div>
+              </td>
+
+              <!-- SUPPRIMER -->
+              <td>
+
+                <button type="button" class="button danger" (click)="retirer(item)" title="Supprimer">
+                  <i class="fa-solid fa-trash-can"></i>
+                </button>
+
+              </td>
+            </tr>
+
+          } @empty {
+
+            <tr>
+
+              <td colspan="4" class="panier-vide" i18n>Votre panier est vide.</td>
+
+            </tr>
+          }
+
+        </tbody>
+
+      </table>
+
+
+      <!-- RÉCAPITULATIF -->
+      <table class="receipt">
+
+        <tr>
+
+          <td i18n>Nombre d'articles</td>
+
+          <td>
+            <strong>{{ totalArticles() }} / 5</strong>
+          </td>
+
+        </tr>
+
+
+        <tr>
+
+          <td colspan="2" class="note-inscription" i18n>*L'inscription à l'EPISE se fait sur place pour un montant de 200frs pour l'adhésion à l'année. Tous les produits sont gratuits avec une restriction de 5 produits par passage et de 2 passages par semaine. Si c'est la première fois que vous venez à l'EPISE, prévoyez 200 francs de frais d'inscription lors de votre premier passage.</td>
+
+        </tr>
+
+        <tr>
+
+          <td colspan="2">
+
+            <!-- VALIDER -->
+            <button type="button" class="button primary btn-acheter" (click)="validerCommande()" [disabled]="p.items.length === 0 || commandeEnCours()" i18n>
+              <i class="fa-solid fa-circle-check"></i>
+
+              @if (commandeEnCours()) {
+                Validation en cours...
+              } @else {
+                Valider ma commande
+              }
+            </button>
+
+
+            <!-- IMPRIMER -->
+            <button type="button" class="button secondary btn-valider" (click)="imprimerListe()" [disabled]="p.items.length === 0"
+             i18n>
+
+              <i class="fa-solid fa-print"></i>
+
+              Imprimer ma liste
+
+            </button>
+
+
+            <!-- VIDER -->
+            <button type="button" class="button danger btn-vider" (click)="viderPanier()" [disabled]="p.items.length === 0" i18n>
+
+              <i class="fa-solid fa-trash-can"></i>
+
+              Vider le panier
+
+            </button>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+    </div>
+
+  }
+
+
+  <!-- CONTINUER LES ACHATS -->
+  <div class="continuer">
+
+    <a routerLink="/catalogue" class="button secondary" i18n>
+
+      <i class="fa-solid fa-arrow-left-long"></i>
+
+      Continuer mes achats
+
+    </a>
+
+  </div>
+
+</div>

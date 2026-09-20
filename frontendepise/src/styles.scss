@@ -1,0 +1,152 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #F4F7FA;
+    border: 1.5px solid #d6d5d5;
+    border-radius: 5px;
+}
+
+h1 {
+    color: #1A3A5C;
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+.text-input {
+    padding: 8px 14px;
+    border: 1px solid #d6d5d5;
+    border-radius: 6px;
+    font-size: 13px;
+    margin: 0;
+    min-width: 30vw;
+}
+
+/* Buttons */
+
+.button {
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+.button:hover {
+    transform: scale(102%);
+}
+
+.primary {
+    background-color: #2BA37A;
+    color: white;
+    border: none;
+}
+
+.primary:hover {
+    background-color: #187773;
+}
+
+.secondary {
+    border: 1px solid #1A3A5C;
+    color: #1A3A5C;
+}
+
+.secondary:hover {
+    background-color: #e5e5e8;
+}
+
+.tertiary {
+    background-color: #E1F5EE;
+    color: #0F6E56;
+    border: none;
+}
+
+.tertiary:hover {
+    background-color: #bdd2cb;
+}
+
+.danger {
+    background-color: #AC3939;
+    color: white;
+    border: none;
+}
+
+.danger:hover {
+    background-color: #8c2424;
+}
+
+.information {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30%;
+    margin: 20px;
+    padding: 10px;
+    background-color: #E8F0F8;
+    border: 1px solid #d6d5d5;
+    color: #1A3A5C;
+    border-radius: 5px;
+}
+
+.fa-circle-info {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* Tables */
+
+th {
+    background:#1A3A5C;
+    color: white;
+    text-align: left;
+    padding: 15px;
+}
+
+td {
+    padding: 15px;
+}
+
+tr:nth-child(even) {
+    background-color: #F4F7FA;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 30px;
+}
+
+i {
+    padding: 5px;
+}

@@ -1,0 +1,246 @@
+/* SECTION : Qui sommes-nous ?
+*/
+.section-qui {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 40px;
+  align-items: start;
+  padding: 60px 60px;
+  background-color: #ffffff;
+}
+
+.section-qui h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin: 0;
+}
+
+.section-qui h2 {
+  grid-column: 1;
+  margin: 0;
+}
+
+.section-qui img {
+  grid-column: 2;
+  grid-row: 2 / 5;
+  max-width: 30vw;
+  border-radius: 8px;
+  object-fit: cover;
+  justify-self: center;
+}
+
+.section-qui p {
+  grid-column: 1;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.section-qui a {
+  grid-column: 1;
+  width: fit-content;
+  align-self: center;
+}
+
+/*SECTION : Comment faire un don ?
+*/
+.section-don {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 40px;
+  align-items: start;
+  padding: 60px 60px;
+  background-color: #F9F7F2;
+}
+
+.section-don img {
+  grid-column: 1;
+  grid-row: 1 / 4;
+max-width: 30vw;
+  border-radius: 8px;
+  object-fit: cover;
+  justify-self: center;
+}
+
+.section-don h2 {
+  grid-column: 2;
+  margin: 0;
+}
+
+.section-don p {
+  grid-column: 2;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.section-don a {
+  grid-column: 2;
+  justify-self: end;
+}
+
+/*  SECTION : Catalogue
+*/
+.section-catalogue {
+  padding: 60px 60px;
+  background-color: #ffffff;
+}
+
+.section-catalogue h2 {
+  text-align: center;
+  margin: 0 0 32px 0;
+}
+
+.section-catalogue h3 {
+  margin: 32px 0 16px 0;
+}
+
+.catalogue-nouveautes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+  margin: 0;
+}
+
+.catalogue-nouveautes a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.catalogue-nouveautes .carte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 16px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background-color: #F4F7FA;
+  text-align: center;
+  min-height: 25rem;
+}
+
+.catalogue-nouveautes .carte img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.catalogue-nouveautes .carte h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.catalogue-nouveautes .carte p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+.catalogue-categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.catalogue-categories li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.catalogue-categories li img {
+  width: 15rem;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: #ddd;
+}
+
+.catalogue-categories li p {
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+}
+
+.section-catalogue > a {
+  display: block;
+  width: fit-content;
+  margin: 20px auto 0 auto;
+}
+
+
+.section-ou {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 40px;
+  align-items: start;
+  padding: 60px 60px;
+  background-color: #F9F7F2;
+}
+
+.section-ou h2 {
+  grid-column: 1;
+  margin: 0;
+}
+
+.section-ou img {
+  grid-column: 2;
+  grid-row: 1 / 5;
+  max-width: 30vw;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.section-ou p {
+  grid-column: 1;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.section-ou address {
+  grid-column: 1;
+  font-style: normal;
+  font-size: 14px;
+  color: #1A3A5C;
+  text-decoration: underline;
+  line-height: 1.6;
+}
+
+.section-ou a {
+  grid-column: 1;
+}
+
+section input[type="submit"] {
+    width: fit-content;
+    align-self: center;
+}
+
+svg {
+  width: 100px;
+  height: 100px;
+  padding: 2rem;
+  background-color: #F4F7FA;
+  border-radius: 16px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .section-qui,
+  .section-don {
+    grid-template-columns: 1fr;
+  gap: 0;
+  }
+
+  section .section-img {
+    display: none;
+  }
+}

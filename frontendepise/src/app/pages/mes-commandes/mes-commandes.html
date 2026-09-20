@@ -1,0 +1,89 @@
+<h2 i18n>Mes commandes</h2>
+
+@if (chargement()) {
+  <p>Chargement...</p>
+} @else if (erreur()) {
+  <p class="message-erreur">{{ erreur() }}</p>
+} @else if (commandes().length === 0) {
+  <p i18n>Vous n'avez pas encore passé de commande.</p>
+} @else {
+
+  <table>
+    <thead>
+      <tr>
+        <th i18n>Commande</th>
+        <th i18n>Date</th>
+        <th i18n>Mode</th>
+        <th i18n>Statut</th>
+        <th i18n>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      @for (commande of commandes(); track commande.id_commande) {
+
+        <tr>
+          <td>
+            #{{ commande.id_commande }}
+          </td>
+
+          <td>
+            {{ commande.date_commande | date: 'dd/MM/yyyy HH:mm' }}
+          </td>
+
+          <td>
+            {{
+              commande.mode === 'en_ligne'
+                ? 'En ligne'
+                : 'Retrait magasin'
+            }}
+          </td>
+
+          <td>
+            @if (commande.statut === 'en_attente') {
+              En attente
+            } @else if (commande.statut === 'confirmee') {
+              Confirmée
+            } @else if (commande.statut === 'recuperee') {
+              Récupérée
+            } @else if (commande.statut === 'annulee') {
+              Annulée
+            }
+          </td>
+
+          <td>
+            @if (commande.statut === 'en_attente') {
+
+              <button
+                type="button"
+                class="button danger"
+                (click)="annulerCommande(commande)"
+               i18n>
+                <i class="fa-solid fa-xmark"></i>
+                Annuler
+              </button>
+
+            } @else if (commande.statut === 'recuperee') {
+
+              <span i18n>Commande récupérée</span>
+
+            } @else if (commande.statut === 'annulee') {
+
+              <span i18n>Commande annulée</span>
+
+            } @else {
+
+              <span i18n>Non disponible</span>
+
+            }
+          </td>
+        </tr>
+
+      }
+    </tbody>
+  </table>
+}
+
+<a routerLink="/mon-compte" class="button secondary" i18n>
+  Retour à mon compte
+</a>

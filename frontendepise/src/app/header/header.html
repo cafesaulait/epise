@@ -1,0 +1,55 @@
+<header>
+  <div>
+    <a routerLink="/">
+      <img src="/asset/img/logo.png" alt="Logo EPISE">
+    </a>
+
+    <form class="search-form" action="/produitsrecherche" method="GET" role="search">
+      <input type="search" name="q" id="recherche-header" placeholder="Rechercher un produit..." autocomplete="off">
+
+      <button type="submit" aria-label="Rechercher">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
+
+    <a routerLink="/panier" id="lien-panier" i18n>
+      <i class="fa-solid fa-basket-shopping"></i>
+      Panier
+      @if (panierService.nombreProduits() > 0) {
+        <span class="panier-badge">
+          {{ panierService.nombreProduits() }}
+        </span>
+      }
+    </a>
+
+    <a routerLink="/mon-compte" i18n>
+      <i class="fa-solid fa-user"></i>
+      Mon compte
+    </a>
+
+    <a [href]="lienAutreLangue" class="lang-switch">
+      {{ langueActuelle === 'fr' ? 'EN' : 'FR' }}
+    </a>
+  </div>
+
+  <nav>
+    <a routerLink="/" i18n>Accueil</a>
+    <a href="/#qui-sommes-nous" i18n>
+      Qui sommes-nous ?
+    </a>
+
+    <a routerLink="/catalogue" i18n>
+      Catalogue
+    </a>
+
+    <a routerLink="/don" i18n>
+      Faire un don
+    </a>
+
+    <a href="/#ou-sommes-nous" i18n>
+      Où sommes-nous ?
+    </a>
+
+  </nav>
+
+</header>

@@ -1,0 +1,24 @@
+h2 {
+    font-size: 38px;
+    text-align: center;
+}
+
+.bienvenue {
+    text-align: center;
+    font-size: 32px;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5rem;
+}
+
+.infos p {
+    font-size: 28px;
+}
+
+.infos ul li {
+    font-size: 18px;
+    text-decoration: none;
+}

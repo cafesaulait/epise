@@ -1,0 +1,34 @@
+<h2 i18n>Mon compte</h2>
+
+@if (auth.utilisateur(); as utilisateur) {
+  <p class="bienvenue" i18n>Bienvenue sur votre compte, <b>{{ utilisateur.prenom }}</b> !</p>
+  <div class="infos">
+    <p i18n>Voici les informations de votre compte :</p>
+    <ul>
+      <li i18n><strong>Nom :</strong> {{ utilisateur.nom }}</li>
+      <li i18n><strong>Prénom :</strong> {{ utilisateur.prenom }}</li>
+      <li i18n><strong>Email :</strong> {{ utilisateur.email }}</li>
+    </ul>
+  </div>
+  <p i18n><a routerLink="/mon-compte/modifier">Modifier mes informations</a></p>
+  <p i18n><a routerLink="/mon-compte/changer-mdp">Changer mon mot de passe</a></p>
+    @if (utilisateur.role === 'donateur') {
+    <p>
+      <a routerLink="/mon-compte/dons" i18n>
+        Mes dons
+      </a>
+    </p>
+  } @else {
+    <p>
+      <a routerLink="/mon-compte/commandes" i18n>
+        Mes commandes
+      </a>
+    </p>
+  }
+  <p i18n><a href="#" (click)="$event.preventDefault(); seDeconnecter()">Se déconnecter</a></p>
+  <p i18n><a href="#" (click)="$event.preventDefault(); supprimerCompte()">Supprimer mon compte</a></p>
+} @else {
+  <p i18n>Vous n'êtes pas connecté.</p>
+  <p i18n><a routerLink="/connexion">Se connecter</a></p>
+  <p i18n><a routerLink="/creation-compte">Créer un compte</a></p>
+}

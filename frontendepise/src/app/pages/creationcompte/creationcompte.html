@@ -1,0 +1,122 @@
+<div class="connexion">
+
+  <h1 i18n>Créer un compte</h1>
+
+  <div class="container text-form">
+
+    <form (ngSubmit)="inscrire()">
+
+      <h3 i18n>Remplissez le formulaire pour créer votre compte étudiant.</h3>
+
+      @if (erreur()) {
+        <p class="message-erreur">
+          {{ erreur() }}
+        </p>
+      }
+
+      @if (message()) {
+        <p class="message-confirmation">
+          {{ message() }}
+        </p>
+      }
+
+      <label for="nom" i18n>Nom :</label>
+
+      <input type="text" id="nom" name="nom" class="text-input" [(ngModel)]="nom" required >
+
+      <label for="prenom" i18n>Prénom :</label>
+
+      <input type="text" id="prenom" name="prenom" class="text-input" [(ngModel)]="prenom" required >
+
+      <label for="email" i18n>Adresse mail :</label>
+
+      <input type="email" id="email" name="email" class="text-input" placeholder="mail.exemple@gmail.com" [(ngModel)]="email" required >
+
+      <label for="mdp" i18n>Mot de passe :</label>
+
+      <input type="password" id="mdp" name="mdp" class="text-input" [(ngModel)]="mdp" required >
+
+      <label for="mdpConfirm" i18n>
+        Confirmation du mot de passe :
+      </label>
+
+      <input type="password" id="mdpConfirm" name="mdpConfirm" class="text-input" [(ngModel)]="mdpConfirm" required >
+
+      @if (mdp && mdpConfirm && mdp !== mdpConfirm) {
+        <p class="message-erreur" i18n>
+          Les mots de passe ne sont pas identiques.
+        </p>
+      }
+
+      <label for="role" i18n>Vous êtes :</label>
+
+      <select
+        id="role"
+        name="role"
+        class="text-input"
+        [(ngModel)]="role"
+      >
+        <option value="beneficiaire" i18n>Bénéficiaire (je viens chercher des produits)</option>
+        <option value="donateur" i18n>Donateur (je fais des dons)</option>
+      </select>
+
+      <button type="submit" name="valide" class="button primary" [disabled]="enCours()">
+        <i class="fa-solid fa-user-pen"></i>
+
+        @if (enCours()) {
+          Création en cours...
+        } @else {
+          S'inscrire
+        }
+      </button>
+
+      <div class="account-creation">
+
+        <p i18n>Vous avez déjà un compte ?</p>
+
+        <a routerLink="/connexion" class="button secondary" i18n>
+          <i class="fa-solid fa-user"></i>
+          Se connecter
+        </a>
+
+      </div>
+    </form>
+  </div>
+
+  @if (afficherVerification()) {
+  <div class="popup-overlay">
+    <div class="popup-verification">
+      <h2 i18n>Vérification de votre adresse e-mail</h2>
+      <p i18n>
+        Un e-mail de confirmation a été envoyé à <strong>{{ email }}</strong>.
+      </p>
+      <p i18n>
+        Cliquez sur le lien qu'il contient pour valider votre adresse et créer votre compte.
+      </p>
+
+      <button
+        type="button"
+        class="button primary"
+        [disabled]="enCours()"
+        (click)="confirmerEtCreerCompte()"
+      >
+        @if (enCours()) {
+          Création du compte...
+        } @else {
+          Confirmer mon adresse e-mail
+        }
+      </button>
+
+      <button
+        type="button"
+        class="button secondary"
+        [disabled]="enCours()"
+        (click)="annulerVerification()"
+       i18n>
+        Annuler
+      </button>
+    </div>
+  </div>
+  }
+
+</div>

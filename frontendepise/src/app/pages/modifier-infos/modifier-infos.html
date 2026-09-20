@@ -1,0 +1,24 @@
+<h2 i18n>Modifier mes informations</h2>
+
+<form (ngSubmit)="enregistrer()" class="container text-form">
+  @if (erreur()) {
+    <p class="message-erreur">{{ erreur() }}</p>
+  }
+  @if (message()) {
+    <p class="message-confirmation">{{ message() }}</p>
+  }
+
+  <label for="nom" i18n>Nom :</label>
+  <input type="text" id="nom" name="nom" class="text-input" [(ngModel)]="nom" required />
+
+  <label for="prenom" i18n>Prénom :</label>
+  <input type="text" id="prenom" name="prenom" class="text-input" [(ngModel)]="prenom" required />
+
+  <label for="email">Email :</label>
+  <input type="email" id="email" name="email" class="text-input" [(ngModel)]="email" required />
+
+  <button type="submit" class="button primary" [disabled]="enCours()">
+    {{ enCours() ? 'Enregistrement...' : 'Enregistrer' }}
+  </button>
+  <a routerLink="/mon-compte" class="button secondary" i18n>Retour à mon compte</a>
+</form>

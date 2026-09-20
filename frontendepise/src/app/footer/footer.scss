@@ -1,0 +1,137 @@
+/* CSS fait par Kenzo - Header + Footer */
+
+/* Footer EPISE */
+/* j'ai fait des classes vu qu'il ya plusieurs divs */
+footer {
+    background-color: #1A3A5C;
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    padding: 40px 32px 20px 32px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 28px 40px;
+    min-width: 0;
+}
+
+
+/* Colonne gauche : Contact */
+.footer-contact {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.footer-contact h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+    color: #fff;
+}
+
+.footer-contact p {
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+.footer-contact a {
+    color:#3a97ee;
+    text-decoration: underline;
+}
+
+.footer-contact a:hover {
+    color: #27639C;
+}
+
+/* Colonne centre : nav */
+.footer-nav {
+    grid-column: 2;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 20px;
+    align-content: start;
+}
+
+.footer-nav a {
+    color: #E1F5EE;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer-nav a:hover {
+    color: #3587d3;
+}
+
+/* Colonne droite : réseaux sociaux */
+.footer-reseaux {
+    grid-column: 3;
+    grid-row: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.footer-reseaux a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer-reseaux a:hover{
+    color: #3a97ee;
+}
+
+/* Copyright pleine largeur */
+.footer-copyright p {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    text-align: center;
+    font-size: 11px;
+    color: #aaa;
+    margin: 0;
+    border-top: 1px solid #2e5070;
+    padding-top: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    footer {
+        padding: 28px 16px 16px 16px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        gap: 18px;
+    }
+
+    /* car certains styles peuvent venir d'autres CSS */
+    footer > * {
+        min-width: 0;
+    }
+
+
+    .footer-contact {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .footer-nav {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .footer-reseaux {
+        grid-column: 1;
+        grid-row: 3;
+        gap: 16px;
+    }
+
+    .footer-copyright p {
+        grid-column: 1;
+        grid-row: 4;
+    }
+}
