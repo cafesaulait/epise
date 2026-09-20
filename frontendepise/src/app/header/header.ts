@@ -35,11 +35,16 @@ export class Header implements OnInit {
   ngOnInit(): void {}
 
   get langueActuelle(): 'fr' | 'en' {
-    return window.location.port === '4201' ? 'en' : 'fr';
+    return window.location.pathname === '/en' || window.location.pathname.startsWith('/en/')
+      ? 'en'
+      : 'fr';
   }
 
   get lienAutreLangue(): string {
-    const autrePort = window.location.port === '4201' ? '4200' : '4201';
-    return `${window.location.protocol}//${window.location.hostname}:${autrePort}${window.location.pathname}`;
+    if (this.langueActuelle === 'en') {
+      return window.location.pathname.replace(/^\/en(?=\/|$)/, '') || '/';
+    }
+
+    return `/en${window.location.pathname === '/' ? '/' : window.location.pathname}`;
   }
 }

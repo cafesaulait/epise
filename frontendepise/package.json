@@ -7,6 +7,9 @@
     "start:fr": "ng serve --configuration=fr --port 4200",
     "start:en": "ng serve --configuration=en --port=4201 --open",
     "build": "ng build",
+    "build:fr": "ng build --configuration production,fr",
+    "build:en": "ng build --configuration production,en",
+    "build:netlify": "npm run build:fr && npm run build:en && node scripts/prepare-netlify.mjs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "i18n:extract": "ng extract-i18n --output-path src/locale"

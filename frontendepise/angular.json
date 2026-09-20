@@ -71,12 +71,20 @@
             },
             "fr": {
               "localize": ["fr"],
-              "outputPath": "dist/site-fr/",
+              "outputPath": {
+                "base": "dist",
+                "browser": ""
+              },
+              "baseHref": "/",
               "i18nMissingTranslation": "warning"
             },
             "en": {
               "localize": ["en"],
-              "outputPath": "dist/site-en/",
+              "outputPath": {
+                "base": "dist/en",
+                "browser": ""
+              },
+              "baseHref": "/en/",
               "i18nMissingTranslation": "warning"
             },
 

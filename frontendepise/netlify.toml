@@ -1,6 +1,11 @@
 [build]
-  command = "npm run build"
-  publish = "dist/frontendepise/browser"
+  command = "npm run build:netlify"
+  publish = "dist"
+
+[[redirects]]
+  from = "/en/*"
+  to = "/en/index.html"
+  status = 200
 
 [[redirects]]
   from = "/*"
