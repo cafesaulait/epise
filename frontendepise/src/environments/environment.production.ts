@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://backoffice-epise-unc.infinityfree.me',
+  apiUrl: 'https://ssh-backoffice-epise.alwaysdata.net',
 };
