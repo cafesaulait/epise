@@ -2,8 +2,8 @@
 @if (produit(); as p) {
   <img
     [src]="p.image
-      ? '/asset/img/produits/' + p.image
-      : '/asset/img/produits/default.png'"
+      ? imageBaseUrl + '/produits/' + p.image
+      : imageBaseUrl + '/produits/default.png'"
     [alt]="p.nom"
     style="width: 30vw;"
   />

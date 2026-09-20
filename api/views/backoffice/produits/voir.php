@@ -27,7 +27,7 @@ $produitStock = (int)($produit['stock'] ?? 0);
     <div class="detail-image">
 
         <img
-            src="/frontendepise/public/asset/img/produits/<?= htmlspecialchars($produitImage) ?>"
+            src="/assets/img/produits/<?= htmlspecialchars($produitImage) ?>"
             alt="<?= htmlspecialchars($produitNom) ?>">
 
     </div>

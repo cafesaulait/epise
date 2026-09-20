@@ -4,6 +4,7 @@ import { ProduitService, Produit } from '../../core/services/produit.service';
 import { CategorieService, Categorie } from '../../core/services/categorie.service';
 import { PanierService } from '../../core/services/panier.service';
 import { AuthService } from '../../core/services/auth.service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   imports: [RouterLink],
@@ -12,6 +13,7 @@ import { AuthService } from '../../core/services/auth.service';
   templateUrl: './main.html',
 })
 export class Main implements OnInit {
+  readonly imageBaseUrl = `${environment.apiUrl}/assets/img`;
   nouveautes = signal<Produit[]>([]);
   categories = signal<Categorie[]>([]);
 

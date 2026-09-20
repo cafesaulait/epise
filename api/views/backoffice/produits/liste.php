@@ -37,7 +37,7 @@
                     ?>
 
                     <img
-                        src="/frontendepise/public/asset/img/produits/<?= htmlspecialchars($imageProduit) ?>"
+                        src="/assets/img/produits/<?= htmlspecialchars($imageProduit) ?>"
                         alt="<?= htmlspecialchars($produit['nom']) ?>">
 
                 </div>

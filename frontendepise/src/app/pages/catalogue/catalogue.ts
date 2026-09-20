@@ -5,6 +5,7 @@ import { ProduitService, Produit } from '../../core/services/produit.service';
 import { CategorieService, Categorie } from '../../core/services/categorie.service';
 import { PanierService } from '../../core/services/panier.service';
 import { AuthService } from '../../core/services/auth.service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   imports: [SlicePipe, RouterLink],
@@ -13,6 +14,7 @@ import { AuthService } from '../../core/services/auth.service';
   templateUrl: './catalogue.html',
 })
 export class Catalogue implements OnInit {
+  readonly imageBaseUrl = `${environment.apiUrl}/assets/img`;
   produits = signal<Produit[]>([]);
   categories = signal<Categorie[]>([]);
   recherche = signal<string>('');

@@ -50,13 +50,8 @@ class Backoffice extends \app\Controller
             throw new \RuntimeException('Type d\'image invalide.');
         }
 
-        $dossier = dirname(ROOT)
-            . DIRECTORY_SEPARATOR
-            . 'frontendepise'
-            . DIRECTORY_SEPARATOR
-            . 'public'
-            . DIRECTORY_SEPARATOR
-            . 'asset'
+        $dossier = ROOT
+            . 'assets'
             . DIRECTORY_SEPARATOR
             . 'img'
             . DIRECTORY_SEPARATOR
@@ -97,13 +92,8 @@ class Backoffice extends \app\Controller
 
         $nomFichier = basename($nomFichier);
 
-        $chemin = dirname(ROOT)
-            . DIRECTORY_SEPARATOR
-            . 'frontendepise'
-            . DIRECTORY_SEPARATOR
-            . 'public'
-            . DIRECTORY_SEPARATOR
-            . 'asset'
+        $chemin = ROOT
+            . 'assets'
             . DIRECTORY_SEPARATOR
             . 'img'
             . DIRECTORY_SEPARATOR

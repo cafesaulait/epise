@@ -45,7 +45,7 @@
                     ?>
 
                     <img
-                        src="/frontendepise/public/asset/img/categories/<?= htmlspecialchars($imageCategorie) ?>"
+                        src="/assets/img/categories/<?= htmlspecialchars($imageCategorie) ?>"
                         alt="<?= htmlspecialchars($categorie['nom']) ?>">
 
                 </div>

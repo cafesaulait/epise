@@ -138,7 +138,7 @@
                 ?>
 
                 <img
-                    src="/asset/img/produits/<?= htmlspecialchars($imageProduit) ?>"
+                    src="/assets/img/produits/<?= htmlspecialchars($imageProduit) ?>"
                     class="upload-preview"
                     data-upload-preview
                     alt="Image actuelle du produit">

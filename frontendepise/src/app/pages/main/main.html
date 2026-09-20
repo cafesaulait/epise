@@ -35,8 +35,8 @@ Ensuite, il vous sera demandé de renseigner les informations nécessaires, nota
         <div class="carte">
           <img
                 [src]="produit.image
-                  ? '/asset/img/produits/' + produit.image
-                  : '/asset/img/produits/default.png'"
+                  ? imageBaseUrl + '/produits/' + produit.image
+                  : imageBaseUrl + '/produits/default.png'"
                 [alt]="produit.nom"
               />
           <h3>{{ produit.nom }}</h3>
@@ -56,8 +56,8 @@ Ensuite, il vous sera demandé de renseigner les informations nécessaires, nota
         <a [routerLink]="['/produits']" [queryParams]="{ categorie: categorie.id_categorie }">
           <img
             [src]="categorie.image
-              ? '/asset/img/categories/' + categorie.image
-              : '/asset/img/categories/default.png'"
+              ? imageBaseUrl + '/categories/' + categorie.image
+              : imageBaseUrl + '/categories/default.png'"
             [alt]="categorie.nom"
           />
           <p>{{ categorie.nom }}</p>

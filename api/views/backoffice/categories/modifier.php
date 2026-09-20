@@ -91,7 +91,7 @@ $imageCategorie = !empty($categorie['image']) ? $categorie['image'] : 'default.p
                 ?>
 
                 <img
-                    src="/asset/img/categories/<?= htmlspecialchars($imageCategorie) ?>"
+                    src="/assets/img/categories/<?= htmlspecialchars($imageCategorie) ?>"
                     class="upload-preview"
                     data-upload-preview
                     alt="Image actuelle de la catégorie">

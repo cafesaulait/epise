@@ -21,7 +21,7 @@
             <tr>
               <!-- IMAGE -->
               <td>
-                <img src="/asset/img/produits/{{ item.image }}" alt="{{ item.nom }}" class="panier-image">
+                <img [src]="imageBaseUrl + '/produits/' + item.image" alt="{{ item.nom }}" class="panier-image">
               </td>
 
               <!-- PRODUIT -->

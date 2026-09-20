@@ -7,6 +7,7 @@ import { PanierService, PanierContenu, PanierItem } from '../../core/services/pa
 import { CommandeService } from '../../core/services/commande.service';
 
 import { AuthService } from '../../core/services/auth.service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   imports: [RouterLink],
@@ -15,6 +16,7 @@ import { AuthService } from '../../core/services/auth.service';
   templateUrl: './panier.html',
 })
 export class Panier implements OnInit {
+  readonly imageBaseUrl = `${environment.apiUrl}/assets/img`;
   panier = signal<PanierContenu | null>(null);
 
   chargement = signal(true);

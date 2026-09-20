@@ -3,6 +3,7 @@ import { ActivatedRoute, RouterLink, Router } from '@angular/router';
 import { ProduitService, Produit } from '../../core/services/produit.service';
 import { PanierService } from '../../core/services/panier.service';
 import { AuthService } from '../../core/services/auth.service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   imports: [RouterLink],
@@ -11,6 +12,7 @@ import { AuthService } from '../../core/services/auth.service';
   templateUrl: './produit-detail.html',
 })
 export class ProduitDetail implements OnInit {
+  readonly imageBaseUrl = `${environment.apiUrl}/assets/img`;
   produit = signal<Produit | null>(null);
   introuvable = signal(false);
 
