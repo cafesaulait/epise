@@ -26,10 +26,19 @@ export class Catalogue implements OnInit {
   );
 
   produitsFiltres = computed(() => {
-    const terme = this.recherche().trim().toLowerCase();
+    const terme = this.normaliser(this.recherche());
     if (!terme) return this.produits();
-    return this.produits().filter((p) => p.nom.toLowerCase().includes(terme));
+    return this.produits().filter((p) =>
+      this.normaliser(`${p.nom} ${p.description}`).includes(terme),
+    );
   });
+
+  private normaliser(texte: string): string {
+    return texte
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase();
+  }
 
   constructor(
     private produitService: ProduitService,

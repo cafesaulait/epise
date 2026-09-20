@@ -1,6 +1,6 @@
 import { Component, OnInit, effect } from '@angular/core';
 
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 import { PanierService } from '../core/services/panier.service';
 
@@ -16,6 +16,7 @@ export class Header implements OnInit {
   constructor(
     public panierService: PanierService,
     private auth: AuthService,
+    private router: Router,
   ) {
     effect(() => {
       const utilisateur = this.auth.utilisateur();
@@ -33,6 +34,14 @@ export class Header implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  rechercher(event: Event, terme: string): void {
+    event.preventDefault();
+
+    this.router.navigate(['/catalogue'], {
+      queryParams: { recherche: terme.trim() || null },
+    });
+  }
 
   get langueActuelle(): 'fr' | 'en' {
     return window.location.pathname === '/en' || window.location.pathname.startsWith('/en/')

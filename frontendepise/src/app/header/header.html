@@ -4,8 +4,8 @@
       <img src="/asset/img/logo.png" alt="Logo EPISE">
     </a>
 
-    <form class="search-form" action="/produitsrecherche" method="GET" role="search">
-      <input type="search" name="q" id="recherche-header" placeholder="Rechercher un produit..." autocomplete="off">
+    <form class="search-form" (submit)="rechercher($event, recherche.value)" role="search">
+      <input #recherche type="search" id="recherche-header" placeholder="Rechercher un produit..." i18n-placeholder autocomplete="off">
 
       <button type="submit" aria-label="Rechercher">
         <i class="fa-solid fa-magnifying-glass"></i>
