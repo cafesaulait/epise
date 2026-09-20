@@ -1,9 +1,9 @@
 <?php
 session_start();
 date_default_timezone_set('Pacific/Noumea');
-define('ROOT', __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'api' . DIRECTORY_SEPARATOR);
+define('ROOT', __DIR__ . DIRECTORY_SEPARATOR);
 
-$originsAutorisees = ['http://localhost:4200', 'http://localhost:4201'];
+$originsAutorisees = ['http://localhost:4200', 'http://localhost:4201', 'https://epise-unc.netlify.app'];
 $origine = $_SERVER['HTTP_ORIGIN'] ?? '';
 
 if (in_array($origine, $originsAutorisees, true)) {
