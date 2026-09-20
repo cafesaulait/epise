@@ -1,5 +1,4 @@
+Access-Control-Allow-Origin: *
 RewriteEngine On
 RewriteRule ^$ frontend/ [L]
 RewriteRule ^api/?$ api/ [L]
-
-Access-Control-Allow-Origin: *
