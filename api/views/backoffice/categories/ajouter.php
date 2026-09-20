@@ -90,7 +90,7 @@
         <div class="form-actions">
 
             <a
-                href="/epise/api/backoffice/categories"
+                href="/backoffice/categories"
                 class="button secondary">
                 Annuler
             </a>

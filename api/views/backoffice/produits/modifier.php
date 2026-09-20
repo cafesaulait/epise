@@ -150,7 +150,7 @@
         <div class="form-actions">
 
             <a
-                href="/epise/api/backoffice/produits"
+                href="/backoffice/produits"
                 class="button secondary">
                 Annuler
             </a>
@@ -178,7 +178,7 @@
     </p>
 
     <a
-        href="/epise/api/backoffice/produitSupprimer/<?= (int)$produit['id_produit'] ?>"
+        href="/backoffice/produitSupprimer/<?= (int)$produit['id_produit'] ?>"
         class="button danger"
         onclick="return confirm('Voulez-vous vraiment supprimer ce produit ?');">
         <i class="fa-solid fa-trash"></i>

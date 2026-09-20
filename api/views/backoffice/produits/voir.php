@@ -14,7 +14,7 @@ $produitStock = (int)($produit['stock'] ?? 0);
     </div>
 
     <a
-        href="/epise/api/backoffice/produitModifier/<?= $produitId ?>"
+        href="/backoffice/produitModifier/<?= $produitId ?>"
         class="button primary">
         <i class="fa-solid fa-pen"></i>
         Modifier
@@ -27,7 +27,7 @@ $produitStock = (int)($produit['stock'] ?? 0);
     <div class="detail-image">
 
         <img
-            src="/epise/frontendepise/public/asset/img/produits/<?= htmlspecialchars($produitImage) ?>"
+            src="/frontendepise/public/asset/img/produits/<?= htmlspecialchars($produitImage) ?>"
             alt="<?= htmlspecialchars($produitNom) ?>">
 
     </div>
@@ -72,14 +72,14 @@ $produitStock = (int)($produit['stock'] ?? 0);
 <div class="detail-actions">
 
     <a
-        href="/epise/api/backoffice/produits"
+        href="/backoffice/produits"
         class="button secondary">
         <i class="fa-solid fa-arrow-left"></i>
         Retour aux produits
     </a>
 
     <a
-        href="/epise/api/backoffice/produitModifier/<?= $produitId ?>"
+        href="/backoffice/produitModifier/<?= $produitId ?>"
         class="button primary">
         <i class="fa-solid fa-pen"></i>
         Modifier

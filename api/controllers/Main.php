@@ -6,7 +6,7 @@ class Main extends \app\Controller
 {
     public function index(): void
     {
-        header('Location: /epise/frontendepise/');
+        header('Location: /backoffice');
         exit;
     }
 }

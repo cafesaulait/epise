@@ -16,7 +16,7 @@
 
     <link
         rel="stylesheet"
-        href="/epise/api/assets/css/backoffice.css">
+        href="/assets/css/backoffice.css">
 
 </head>
 
@@ -41,37 +41,37 @@
 
         <nav class="backoffice-nav">
 
-            <a href="/epise/api/backoffice">
+            <a href="/backoffice">
                 <i class="fa-solid fa-chart-line"></i>
                 Tableau de bord
             </a>
 
-            <a href="/epise/api/backoffice/produits">
+            <a href="/backoffice/produits">
                 <i class="fa-solid fa-box"></i>
                 Produits
             </a>
 
-            <a href="/epise/api/backoffice/categories">
+            <a href="/backoffice/categories">
                 <i class="fa-solid fa-folder"></i>
                 Catégories
             </a>
 
-            <a href="/epise/api/backoffice/dons">
+            <a href="/backoffice/dons">
                 <i class="fa-solid fa-hand-holding-heart"></i>
                 Dons
             </a>
 
-            <a href="/epise/api/backoffice/horaires">
+            <a href="/backoffice/horaires">
                 <i class="fa-solid fa-clock"></i>
                 Horaires
             </a>
 
-            <a href="/epise/api/backoffice/commandes">
+            <a href="/backoffice/commandes">
                 <i class="fa-solid fa-cart-shopping"></i>
                 Commandes
             </a>
 
-            <a href="/epise/api/backoffice/logout">
+            <a href="/backoffice/logout">
                 <i class="fa-solid fa-right-from-bracket"></i>
                 Déconnexion
             </a>
@@ -86,7 +86,7 @@
 
     </main>
 
-    <script src="/epise/api/assets/js/backoffice.js"></script>
+    <script src="/assets/js/backoffice.js"></script>
 </body>
 
 </html>

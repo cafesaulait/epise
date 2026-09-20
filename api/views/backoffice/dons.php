@@ -147,7 +147,7 @@
 
                             <form
                                 method="post"
-                                action="/epise/api/backoffice/categorieDepuisDon/<?= (int) $produit['id_don_produit'] ?>"
+                                action="/backoffice/categorieDepuisDon/<?= (int) $produit['id_don_produit'] ?>"
                                 style="margin-top: 8px;">
 
                                 <button

@@ -14,7 +14,7 @@
 
     <link
         rel="stylesheet"
-        href="/epise/api/assets/css/backoffice.css">
+        href="/assets/css/backoffice.css">
 
 </head>
 

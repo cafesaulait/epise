@@ -7,7 +7,7 @@ class Backoffice extends \app\Controller
     private function guard(): void
     {
         if (empty($_SESSION['admin_id'])) {
-            header('Location: /epise/api/backoffice/login');
+            header('Location: /backoffice/login');
             exit;
         }
     }
@@ -183,7 +183,7 @@ class Backoffice extends \app\Controller
                 $_SESSION['prenom'] = $a['prenom'];
                 $_SESSION['nom'] = $a['nom'];
 
-                header('Location: /epise/api/backoffice');
+                header('Location: /backoffice');
                 exit;
             }
 
@@ -202,7 +202,7 @@ class Backoffice extends \app\Controller
         $_SESSION = [];
         session_destroy();
 
-        header('Location: /epise/api/backoffice/login');
+        header('Location: /backoffice/login');
         exit;
     }
 
@@ -250,7 +250,7 @@ class Backoffice extends \app\Controller
                     'image' => $image
                 ]);
 
-                header('Location: /epise/api/backoffice/produits');
+                header('Location: /backoffice/produits');
                 exit;
             } catch (\Throwable $e) {
                 $erreur = $e->getMessage();
@@ -335,7 +335,7 @@ class Backoffice extends \app\Controller
                     );
                 }
 
-                header('Location: /epise/api/backoffice/produits');
+                header('Location: /backoffice/produits');
                 exit;
             } catch (\Throwable $e) {
                 $erreur = $e->getMessage();
@@ -360,7 +360,7 @@ class Backoffice extends \app\Controller
         $produit = $this->Produit->findById($id);
 
         if (!$produit) {
-            header('Location: /epise/api/backoffice/produits');
+            header('Location: /backoffice/produits');
             exit;
         }
 
@@ -373,7 +373,7 @@ class Backoffice extends \app\Controller
             $image
         );
 
-        header('Location: /epise/api/backoffice/produits');
+        header('Location: /backoffice/produits');
         exit;
     }
 
@@ -416,7 +416,7 @@ class Backoffice extends \app\Controller
                     'image' => $image
                 ]);
 
-                header('Location: /epise/api/backoffice/categories');
+                header('Location: /backoffice/categories');
                 exit;
             } catch (\Throwable $e) {
                 $erreur = $e->getMessage();
@@ -499,7 +499,7 @@ class Backoffice extends \app\Controller
                     );
                 }
 
-                header('Location: /epise/api/backoffice/categories');
+                header('Location: /backoffice/categories');
                 exit;
             } catch (\Throwable $e) {
                 $erreur = $e->getMessage();
@@ -522,7 +522,7 @@ class Backoffice extends \app\Controller
         $categorie = $this->Categorie->findById($id);
 
         if (!$categorie) {
-            header('Location: /epise/api/backoffice/categories');
+            header('Location: /backoffice/categories');
             exit;
         }
 
@@ -543,7 +543,7 @@ class Backoffice extends \app\Controller
             return;
         }
 
-        header('Location: /epise/api/backoffice/categories');
+        header('Location: /backoffice/categories');
         exit;
     }
 
@@ -732,7 +732,7 @@ class Backoffice extends \app\Controller
                 );
 
             header(
-                'Location: /epise/api/backoffice/dons'
+                'Location: /backoffice/dons'
             );
 
             exit;
@@ -748,7 +748,7 @@ class Backoffice extends \app\Controller
 
             echo '<p>';
 
-            echo '<a href="/epise/api/backoffice/dons">'
+            echo '<a href="/backoffice/dons">'
                 . 'Retour aux dons'
                 . '</a>';
 

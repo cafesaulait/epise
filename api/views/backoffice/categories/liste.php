@@ -6,7 +6,7 @@
     </div>
 
     <a
-        href="/epise/api/backoffice/categorieAjouter"
+        href="/backoffice/categorieAjouter"
         class="button primary">
         <i class="fa-solid fa-plus"></i>
         Ajouter une catégorie
@@ -45,7 +45,7 @@
                     ?>
 
                     <img
-                        src="/epise/frontendepise/public/asset/img/categories/<?= htmlspecialchars($imageCategorie) ?>"
+                        src="/frontendepise/public/asset/img/categories/<?= htmlspecialchars($imageCategorie) ?>"
                         alt="<?= htmlspecialchars($categorie['nom']) ?>">
 
                 </div>
@@ -69,14 +69,14 @@
                 <div class="actions">
 
                     <a
-                        href="/epise/api/backoffice/categorieVoir/<?= (int)$categorie['id_categorie'] ?>"
+                        href="/backoffice/categorieVoir/<?= (int)$categorie['id_categorie'] ?>"
                         class="button secondary">
                         <i class="fa-solid fa-eye"></i>
                         Voir
                     </a>
 
                     <a
-                        href="/epise/api/backoffice/categorieModifier/<?= (int)$categorie['id_categorie'] ?>"
+                        href="/backoffice/categorieModifier/<?= (int)$categorie['id_categorie'] ?>"
                         class="button primary">
                         <i class="fa-solid fa-pen"></i>
                         Modifier

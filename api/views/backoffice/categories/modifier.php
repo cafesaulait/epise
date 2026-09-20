@@ -103,7 +103,7 @@ $imageCategorie = !empty($categorie['image']) ? $categorie['image'] : 'default.p
         <div class="form-actions">
 
             <a
-                href="/epise/api/backoffice/categories/"
+                href="/backoffice/categories/"
                 class="button secondary">
                 Annuler
             </a>
@@ -131,7 +131,7 @@ $imageCategorie = !empty($categorie['image']) ? $categorie['image'] : 'default.p
     </p>
 
     <a
-        href="/epise/api/backoffice/categorieSupprimer/<?= (int)$categorie['id_categorie'] ?>"
+        href="/backoffice/categorieSupprimer/<?= (int)$categorie['id_categorie'] ?>"
         class="button danger"
         onclick="return confirm('Voulez-vous vraiment supprimer cette catégorie ?');">
         <i class="fa-solid fa-trash"></i>

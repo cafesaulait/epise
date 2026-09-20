@@ -5,7 +5,7 @@
     </div>
 
     <a
-        href="/epise/api/backoffice/produitAjouter"
+        href="/backoffice/produitAjouter"
         class="button primary">
         <i class="fa-solid fa-plus"></i>
         Ajouter un produit
@@ -37,7 +37,7 @@
                     ?>
 
                     <img
-                        src="/epise/frontendepise/public/asset/img/produits/<?= htmlspecialchars($imageProduit) ?>"
+                        src="/frontendepise/public/asset/img/produits/<?= htmlspecialchars($imageProduit) ?>"
                         alt="<?= htmlspecialchars($produit['nom']) ?>">
 
                 </div>
@@ -66,14 +66,14 @@
                     <div class="actions">
 
                         <a
-                            href="/epise/api/backoffice/produitVoir/<?= (int)$produit['id_produit'] ?>"
+                            href="/backoffice/produitVoir/<?= (int)$produit['id_produit'] ?>"
                             class="button secondary">
                             <i class="fa-solid fa-eye"></i>
                             Voir
                         </a>
 
                         <a
-                            href="/epise/api/backoffice/produitModifier/<?= (int)$produit['id_produit'] ?>"
+                            href="/backoffice/produitModifier/<?= (int)$produit['id_produit'] ?>"
                             class="button primary">
                             <i class="fa-solid fa-pen"></i>
                             Modifier

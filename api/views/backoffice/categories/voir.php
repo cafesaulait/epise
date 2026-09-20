@@ -10,7 +10,7 @@ $categorie = $categorie ?? [];
     </div>
 
     <a
-        href="/epise/api/backoffice/categorieModifier/<?= (int)$categorie['id_categorie'] ?>"
+        href="/backoffice/categorieModifier/<?= (int)$categorie['id_categorie'] ?>"
         class="button primary">
         <i class="fa-solid fa-pen"></i>
         Modifier
@@ -29,7 +29,7 @@ $categorie = $categorie ?? [];
         ?>
 
         <img
-            src="/epise/frontendepise/public/asset/img/categories/<?= htmlspecialchars($imageCategorie) ?>"
+            src="/frontendepise/public/asset/img/categories/<?= htmlspecialchars($imageCategorie) ?>"
             alt="<?= htmlspecialchars($categorie['nom']) ?>">
 
     </div>
@@ -59,14 +59,14 @@ $categorie = $categorie ?? [];
 <div class="detail-actions">
 
     <a
-        href="/epise/api/backoffice/categories"
+        href="/backoffice/categories"
         class="button secondary">
         <i class="fa-solid fa-arrow-left"></i>
         Retour aux catégories
     </a>
 
     <a
-        href="/epise/api/backoffice/categorieModifier/<?= (int)$categorie['id_categorie'] ?>"
+        href="/backoffice/categorieModifier/<?= (int)$categorie['id_categorie'] ?>"
         class="button primary">
         <i class="fa-solid fa-pen"></i>
         Modifier
