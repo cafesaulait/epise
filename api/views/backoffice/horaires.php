@@ -38,7 +38,19 @@
     method="post"
     class="form-card horaires-form">
 
-    <?php foreach ($horaires as $horaire): ?>
+    <?php
+    $jours = [
+        1 => 'Lundi',
+        2 => 'Mardi',
+        3 => 'Mercredi',
+        4 => 'Jeudi',
+        5 => 'Vendredi',
+        6 => 'Samedi',
+        7 => 'Dimanche',
+    ];
+    ?>
+
+    <?php foreach (($horaires ?? []) as $horaire): ?>
 
         <?php
         $jour = (int) $horaire['jour'];
