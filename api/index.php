@@ -2,7 +2,6 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 0);
 
-session_start();
 date_default_timezone_set('Pacific/Noumea');
 define('ROOT', __DIR__ . DIRECTORY_SEPARATOR);
 
@@ -16,13 +15,21 @@ $originsAutorisees = [
 
 if (in_array($origine, $originsAutorisees, true)) {
     header("Access-Control-Allow-Origin: $origine");
-} else {
-    header("Access-Control-Allow-Origin: https://epise-unc.netlify.app");
+    header('Access-Control-Allow-Credentials: true');
 }
 header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
-header('Access-Control-Allow-Headers: Content-Type, Authorization');
-header('Access-Control-Allow-Credentials: true');
+header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With');
+header('Access-Control-Max-Age: 86400');
 header('Vary: Origin');
+
+session_set_cookie_params([
+    'lifetime' => 0,
+    'path' => '/',
+    'secure' => true,
+    'httponly' => true,
+    'samesite' => 'None'
+]);
+session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(204);

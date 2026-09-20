@@ -10,7 +10,8 @@ class ConnexionBDD
 
     private function __construct()
     {
-        $this->connexion = new \mysqli('localhost', 'root', '', 'episebdd');
+        $this->connexion = new \mysqli('ssh-backoffice-epise.alwaysdata.net', 'backoffice-epise', 'EP2Oq7xl5w7tD', 'backoffice-epise_episebdd');
+        /*$this->connexion = new \mysqli('localhost', 'root', '', 'episebdd');*/
 
         if ($this->connexion->connect_error) {
             throw new \Exception('Erreur de connexion : ' . $this->connexion->connect_error);
