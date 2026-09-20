@@ -3,10 +3,21 @@ session_start();
 date_default_timezone_set('Pacific/Noumea');
 define('ROOT', __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'api' . DIRECTORY_SEPARATOR);
 
-header('Access-Control-Allow-Origin: http://localhost:4200');
+$originsAutorisees = ['http://localhost:4200', 'http://localhost:4201'];
+$origine = $_SERVER['HTTP_ORIGIN'] ?? '';
+
+if (in_array($origine, $originsAutorisees, true)) {
+    header("Access-Control-Allow-Origin: $origine");
+}
+
 header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type, Authorization');
 header('Access-Control-Allow-Credentials: true');
+
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(204);
+    exit;
+}
 
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(204);

@@ -17,6 +17,17 @@ class Panier extends \app\Controller
         $id_panier = $this->Panier->getOrCreate($id_utilisateur);
         $method = $_SERVER['REQUEST_METHOD'];
 
+
+        if ($method !== 'GET') {
+            $role = $_SESSION['utilisateur']['role'] ?? '';
+            if ($role !== 'beneficiaire') {
+                $this->json([
+                    'error' => 'Seuls les bénéficiaires peuvent modifier leur panier. Si vous vous êtes trompé, vous pouvez modifier votre rôle sur votre compte.'
+                ], 403);
+                return;
+            }
+        }
+
         try {
             switch ($method) {
                 case 'GET':

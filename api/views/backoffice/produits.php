@@ -1,2 +1,0 @@
-<h1>Produits</h1>
-<a href="/epise/api/backoffice">Retour</a><?php foreach ($produits as $p): ?><article><strong><?= htmlspecialchars($p['nom']) ?></strong> — stock : <?= (int)$p['stock'] ?></article><?php endforeach; ?>

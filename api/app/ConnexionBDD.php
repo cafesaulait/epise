@@ -1,6 +1,8 @@
 <?php
 namespace app;
 
+/*Design pattern : singleton*/
+
 class ConnexionBDD
 {
     private static ?ConnexionBDD $instance = null;

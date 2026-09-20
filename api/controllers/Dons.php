@@ -4,6 +4,55 @@ namespace controllers;
 
 class Dons extends \app\Controller
 {
+    private function verifierDateEtHeure(
+        string $date_passage,
+        string $heure_passage
+    ): void {
+        $date = \DateTime::createFromFormat(
+            'Y-m-d',
+            $date_passage
+        );
+
+        $heure = \DateTime::createFromFormat(
+            'H:i',
+            $heure_passage
+        );
+
+        if (
+            !$date
+            || $date->format('Y-m-d') !== $date_passage
+        ) {
+            throw new \InvalidArgumentException(
+                'La date de passage est invalide.'
+            );
+        }
+
+        if (
+            !$heure
+            || $heure->format('H:i') !== $heure_passage
+        ) {
+            throw new \InvalidArgumentException(
+                'L’heure de passage est invalide.'
+            );
+        }
+
+        $maintenant = new \DateTime(
+            'now',
+            new \DateTimeZone('Pacific/Noumea')
+        );
+
+        $passage = new \DateTime(
+            $date_passage . ' ' . $heure_passage,
+            new \DateTimeZone('Pacific/Noumea')
+        );
+
+        if ($passage <= $maintenant) {
+            throw new \InvalidArgumentException(
+                'La date et l’heure de passage doivent être dans le futur.'
+            );
+        }
+    }
+
     public function index(...$params): void
     {
         if (!isset($_SESSION['utilisateur_id']) && !$this->isAdmin()) {
@@ -12,6 +61,7 @@ class Dons extends \app\Controller
         }
 
         $this->loadModel('Don');
+        $this->loadModel('Horaire');
         $method = $_SERVER['REQUEST_METHOD'];
         $id = isset($params[0]) ? (int) $params[0] : 0;
 
@@ -35,11 +85,56 @@ class Dons extends \app\Controller
                         $this->json(['error' => 'Connexion requise'], 401);
                         return;
                     }
+                    $this->loadModel('Utilisateur');
+
+                    $utilisateur = $this->Utilisateur->findById(
+                        (int) $_SESSION['utilisateur_id']
+                    );
+
+                    if (!$utilisateur || $utilisateur['role'] !== 'donateur') {
+                        $this->json([
+                            'error' => 'Seuls les donateurs peuvent proposer un don.'
+                        ], 403);
+                        return;
+                    }
                     $d = $this->jsonInput();
+
+                    if (empty($d['date_passage'])) {
+                        throw new \InvalidArgumentException(
+                            'La date de passage est obligatoire.'
+                        );
+                    }
+
+                    if (empty($d['heure_passage'])) {
+                        throw new \InvalidArgumentException(
+                            'L\'heure de passage est obligatoire.'
+                        );
+                    }
+
+                    $this->verifierDateEtHeure(
+                        $d['date_passage'],
+                        $d['heure_passage']
+                    );
+
+                    if (!$this->Horaire->estOuvert(
+                        $d['date_passage'],
+                        $d['heure_passage']
+                    )) {
+                        throw new \InvalidArgumentException(
+                            'Cette date et cette heure ne correspondent pas aux horaires d’ouverture de l’EPISE.'
+                        );
+                    }
+                    
                     if (empty($d['produits']) || !is_array($d['produits'])) {
                         throw new \InvalidArgumentException('Le don doit contenir au moins un produit (champ "produits")');
                     }
-                    $id_don = $this->Don->create((int) $_SESSION['utilisateur_id'], $d['produits']);
+                    $id_don = $this->Don->create(
+                        (int) $_SESSION['utilisateur_id'],
+                        $d['date_passage'] ?? '',
+                        $d['heure_passage'] ?? '',
+                        $d['commentaire'] ?? null,
+                        $d['produits']
+                    );
                     $this->json(['id_don' => $id_don], 201);
                     return;
 
@@ -61,10 +156,21 @@ class Dons extends \app\Controller
                     $this->json(['error' => 'Méthode non autorisée'], 405);
                     return;
             }
-        } catch (\InvalidArgumentException $e) {
-            $this->json(['error' => $e->getMessage()], 400);
         } catch (\Throwable $e) {
-            $this->json(['error' => $e->getMessage()], 500);
+            error_log(
+                '[EPISE DON] '
+                    . $e->getMessage()
+                    . ' dans '
+                    . $e->getFile()
+                    . ' ligne '
+                    . $e->getLine()
+            );
+
+            $this->json([
+                'error' => $e->getMessage(),
+                'file' => basename($e->getFile()),
+                'line' => $e->getLine()
+            ], 500);
         }
     }
 }
