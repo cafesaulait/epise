@@ -13,6 +13,7 @@ import { MesCommandes } from './pages/mes-commandes/mes-commandes';
 import { MesDons } from './pages/mes-dons/mes-dons';
 import { MentionsLegales } from './pages/mentions-legales/mentions-legales';
 import { PolitiqueConfidentialites } from './pages/politique-confidentialites/politique-confidentialites';
+import { Page404 } from './pages/page404/page404';
 
 
 export const routes: Routes = [
@@ -30,4 +31,5 @@ export const routes: Routes = [
   { path: 'creation-compte', component: Creationcompte },
   { path: 'mentions-legales', component: MentionsLegales },
   { path: 'politique-confidentialites', component: PolitiqueConfidentialites },
+  { path: '**', component: Page404 },
 ];
