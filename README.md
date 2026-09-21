@@ -6,8 +6,8 @@ Projet d'epicerie solidaire compose d'un frontend Angular et d'une API PHP/MySQL
 
 - Frontend Angular : [epise-unc.netlify.app](https://epise-unc.netlify.app/)
 - Version anglaise : [epise-unc.netlify.app/en/](https://epise-unc.netlify.app/en/)
-- API et backoffice PHP : [backoffice-epise-unc.infinityfree.me](https://backoffice-epise-unc.infinityfree.me/)
-- Base de donnees : MySQL sur InfinityFree
+- API et backoffice PHP : [backoffice-epise.alwaysdata.net](https://backoffice-epise.alwaysdata.net/)
+- Base de donnees : MySQL sur AlwaysData
 
 Le frontend n'accede jamais directement a MySQL. Il appelle l'API HTTPS, qui
 retourne des donnees JSON.
@@ -18,7 +18,7 @@ retourne des donnees JSON.
 
 Placer le dossier `api` dans un serveur PHP avec MySQL, puis configurer les
 variables `EPISE_DB_HOST`, `EPISE_DB_USER`, `EPISE_DB_PASSWORD` et
-`EPISE_DB_NAME` avec les valeurs indiquees par InfinityFree. En local, les
+`EPISE_DB_NAME` avec les valeurs indiquees par AlwaysData. En local, les
 valeurs par defaut utilisent MySQL sur `localhost` avec la base `episebdd`.
 
 Le point d'entree est `api/index.php`. Le fichier `api/.htaccess` permet les
@@ -118,8 +118,8 @@ api/assets/img/categories/
 Elles sont accessibles publiquement avec :
 
 ```text
-https://backoffice-epise-unc.infinityfree.me/assets/img/produits/NOM_IMAGE.png
-https://backoffice-epise-unc.infinityfree.me/assets/img/categories/NOM_IMAGE.png
+https://backoffice-epise.alwaysdata.net/assets/img/produits/NOM_IMAGE.png
+https://backoffice-epise.alwaysdata.net/assets/img/categories/NOM_IMAGE.png
 ```
 
 Le backoffice cree un nom aleatoire pour chaque upload et limite les types
