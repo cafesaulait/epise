@@ -11,7 +11,7 @@ Le projet EPISE est compose de deux parties deployees separement :
 
 - un frontend Angular deploye sur Netlify ;
 - une API PHP avec un backoffice et une base MySQL deployes sur
-  Alwaysdata.
+  InfinityFree.
 
 Le frontend ne se connecte jamais directement a MySQL. Il envoie des
 requêtes HTTP a l'API PHP. L'API interroge la base de donnees, applique
@@ -27,10 +27,10 @@ Architecture :
       |
       | appels HTTP
       v
-  API PHP sur Alwaysdata
+  API PHP sur InfinityFree
       |
       v
-  MySQL sur Alwaysdata
+  MySQL sur InfinityFree
 
 ======================================================================
 2. URLS DE DEPLOIEMENT
@@ -43,21 +43,21 @@ Frontend anglais :
 https://epise-unc.netlify.app/en/
 
 API et backoffice :
-https://backoffice-epise.alwaysdata.net
+https://backoffice-epise-unc.infinityfree.me
 
 Exemples d'URLs publiques de l'API :
 
-GET https://backoffice-epise.alwaysdata.net/produits
-GET https://backoffice-epise.alwaysdata.net/categories
-GET https://backoffice-epise.alwaysdata.net/horaires
-GET https://backoffice-epise.alwaysdata.net/mentionslegales
-GET https://backoffice-epise.alwaysdata.net/confidentialite
+GET https://backoffice-epise-unc.infinityfree.me/produits
+GET https://backoffice-epise-unc.infinityfree.me/categories
+GET https://backoffice-epise-unc.infinityfree.me/horaires
+GET https://backoffice-epise-unc.infinityfree.me/mentionslegales
+GET https://backoffice-epise-unc.infinityfree.me/confidentialite
 
 Backoffice :
-https://backoffice-epise.alwaysdata.net/backoffice
+https://backoffice-epise-unc.infinityfree.me/backoffice
 
 Connexion au backoffice :
-https://backoffice-epise.alwaysdata.net/backoffice/login
+https://backoffice-epise-unc.infinityfree.me/backoffice/login
 
 Les identifiants de demonstration doivent etre fournis separement par
 l'auteur du projet. Ils ne doivent pas etre commites dans Git ni inscrits
@@ -69,7 +69,7 @@ dans une documentation publique.
 
 3.1 API et backoffice
 
-Le contenu du dossier api est place dans le repertoire web Alwaysdata :
+Le contenu du dossier api est place dans le repertoire web InfinityFree :
 
 home/backoffice-epise/www/api/
 
@@ -245,7 +245,7 @@ Access-Control-Allow-Credentials: true
 
 Le frontend utilise withCredentials pour conserver la session PHP. Le
 cookie de session est configure avec Secure, HttpOnly et SameSite=None
-afin de permettre les appels HTTPS entre Netlify et Alwaysdata.
+afin de permettre les appels HTTPS entre Netlify et InfinityFree.
 
 ======================================================================
 6. PREUVE QUE L'API EST REST / RESTFUL
@@ -422,11 +422,11 @@ Solution 1 : stocker les images sur le frontend Netlify.
 
 Cette solution convient aux images fixes du site, comme le logo ou les
 illustrations editorales. En revanche, elle ne convient pas aux images
-ajoutees depuis le backoffice : le serveur Alwaysdata ne peut pas ecrire
+ajoutees depuis le backoffice : le serveur InfinityFree ne peut pas ecrire
 dans le deploiement Netlify. De plus, un redeploiement peut remplacer les
 fichiers du frontend.
 
-Solution 2 : stocker les images sur le serveur API Alwaysdata.
+Solution 2 : stocker les images sur le serveur API InfinityFree.
 
 C'est la solution retenue pour les images de produits et de categories.
 Les fichiers se trouvent dans :
@@ -434,11 +434,11 @@ Les fichiers se trouvent dans :
 api/assets/img/produits/
 api/assets/img/categories/
 
-Le backoffice Alwaysdata peut y enregistrer, modifier et supprimer les
+Le backoffice InfinityFree peut y enregistrer, modifier et supprimer les
 images. Le frontend les affiche avec des URLs publiques :
 
-https://backoffice-epise.alwaysdata.net/assets/img/produits/nom-image.png
-https://backoffice-epise.alwaysdata.net/assets/img/categories/nom-image.png
+https://backoffice-epise-unc.infinityfree.me/assets/img/produits/nom-image.png
+https://backoffice-epise-unc.infinityfree.me/assets/img/categories/nom-image.png
 
 Cette solution est la plus coherente car :
 
@@ -466,6 +466,6 @@ unique. Le pattern Fabrique est utilise pour centraliser la creation d'un
 produit issu d'un don. Ces choix reduisent la duplication, separent les
 responsabilites et restent proportionnes a la taille du projet.
 
-Les images dynamiques sont stockees sur Alwaysdata, car le backoffice est
+Les images dynamiques sont stockees sur InfinityFree, car le backoffice est
 le serveur qui les cree et les supprime. Netlify conserve les assets
 statiques du frontend, mais ne sert pas de stockage dynamique.
